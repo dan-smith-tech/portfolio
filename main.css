@@ -72,12 +72,15 @@ a {
 	font-weight: 700;
 }
 
-a:hover,
 a:focus {
-	font-style: normal;
-	text-decoration: underline;
-	color: rgb(2, 149, 243);
+	outline: 2px solid rgb(2, 149, 243);
+	background-color: none;
+}
+
+a:hover {
 	outline: none;
+	background-color: rgba(2, 149, 243, 0.35);
+	border-bottom: 2px solid rgb(2, 149, 243);
 }
 
 .container-button {
@@ -101,7 +104,7 @@ button {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	transition: 250ms background-color, 250ms color, 100ms outline;
+	transition: 250ms background-color, 250ms color;
 }
 
 .button-primary-main {
@@ -128,21 +131,22 @@ button {
 	color: white;
 	background-color: rgb(2, 149, 243);
 	outline: none;
+	border-color: rgb(2, 149, 243);
 }
 
 .button-primary-main:focus,
 .button-primary:focus {
-	outline: 0.2rem solid white;
-}
-
-.button-primary-main:hover,
-.button-primary:hover {
-	border-color: rgb(2, 149, 243);
+	outline: 0.2rem solid rgb(2, 149, 243);
 }
 
 .button-primary-main:hover i,
-.button-primary-main:focus i {
+.button-primary:hover i {
 	color: white;
+}
+
+.button-primary-main:focus i,
+.button-primary:focus i {
+	
 }
 
 .button-secondary {
@@ -166,9 +170,16 @@ button {
 	bottom: 0;
 	font-size: 2.85rem;
 	position: absolute;
+	transition: font-size 100ms, margin-left 100ms, background-color 100ms;
 }
 
-.button-scroll:hover,
+.button-scroll:hover {
+	outline: none;
+	margin-left: calc((100% - 3.35rem - 0.85rem - 0.2rem) / 2 - 10rem);
+	font-size: 3.35rem;
+	background-color: rgba(2, 149, 243, 0.35);
+}
+
 .button-scroll:focus {
 	outline: 0.2rem solid rgb(2, 149, 243);
 }
