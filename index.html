@@ -1,0 +1,85 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="main.css">
+        <title>Dan Smith</title>
+    </head>
+    <body>
+        <main>
+            <section class="section-center" id="landing">
+                <h1>Dan J Smith</h1>
+                <h3>I'm a... <span id="skill"></span></h3>
+                <div class="container-button">
+                    <button class="button-primary-main" onclick="scrollToSection(document.querySelector('#selected-work'))">VIEW MY WORK <i class="fas fa-angle-double-down"></i></button>
+                    <button class="button-primary" onclick="window.open('https://squaresheepstudios.com/portfolio')">COMPLETE PORTFOLIO</button>
+                </div>
+                <button class="button-scroll" onclick="scrollToSection(document.querySelector('#about'))"><i class="fas fa-chevron-down"></i></button>
+            </section>
+            <section id="about">
+                <h4>ABOUT</h4>
+                <h2><span>Eat. Sleep.</span><span>Learn. Repeat.</span></h2>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum nihil atque minima. Neque iusto deserunt enim itaque quia voluptates, eaque sit. Esse alias ut qui dolores rerum quaerat exercitationem quo.</p>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Harum nihil atque minima. Neque iusto deserunt enim itaque quia voluptates, eaque sit. Esse alias ut qui dolores rerum quaerat exercitationem quo.</p>
+                <button class="button-scroll" onclick="scrollToSection(document.querySelector('#selected-work'))"><i class="fas fa-chevron-down"></i></button>
+            </section>
+            <section class="section-large" id="selected-work">
+                <h4>SELECTED WORK</h4>
+                <h2><span>Talk is cheap.</span><span>Show me the code.</span></h2>
+                <button class="button-scroll" onclick="scrollToSection(document.querySelector('#contact'))"><i class="fas fa-chevron-down"></i></button>
+            </section>
+            <section id="contact">
+                <h4>CONTACT</h4>
+                <h2><span>Let's connect,</span><span>and get in touch.</span></h2>
+                <form action="" method="POST">
+                    <div class="form-row">
+                        <div class="form-row-element form-row-element-spacer">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name" placeholder="Dan Smith" class="form-element-input">
+                        </div>
+                        <div class="form-row-element">
+                            <label for="email-contact">Email</label>
+                            <input type="email" name="email" id="email-contact" placeholder="hello@example.com" class="form-element-input">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-row-element">
+                            <label for="message">Message</label>
+                            <textarea type="text" name="message" id="message" placeholder="Hi there," class="form-element-input form-element-input-large"></textarea>
+                        </div>
+                    </div>
+                    <div class="container-button-center">
+                        <button class="button-secondary">SEND MESSAGE</button>
+                    </div>                    
+                </form>
+                <button class="button-scroll" onclick="scrollToSection(document.querySelector('#newsletter'))"><i class="fas fa-chevron-down"></i></button>
+            </section>
+            <section id="newsletter">
+                <h4>NEWSLETTER</h4>
+                <h2><span>Gimme</span><span>MORE!</span></h2>
+                <p>Keep up to date with all the new projects, blog posts, skills, and technology I learn over at my portfolio website, <a href="#">SquareSheep Studios</a>.</p>
+                <form action="" method="POST">
+                    <div class="form-row form-row-inline">
+                        <div class="form-row-element form-row-element-spacer">
+                            <input type="email" name="email" id="email-newsletter" placeholder="Enter your email..." class="form-element-input">
+                            <small>No spam. Unsubscribe at any time.</small>
+                        </div>
+                        <div class="form-row-element" id="button-signup">
+                            <button class="button-secondary">SIGNUP</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <canvas></canvas>
+        </main>
+        <footer>
+            © Copyright 2021, Dan J Smith
+        </footer>
+        <script src="main.js"></script>
+    </body>
+</html>
