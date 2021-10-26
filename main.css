@@ -72,15 +72,15 @@ a {
 	font-weight: 700;
 }
 
+a:hover {
+	outline: none;
+	background-color: rgba(2, 149, 243, 0.5);
+	border-bottom: 2px solid rgb(2, 149, 243);
+}
+
 a:focus {
 	outline: 2px solid rgb(2, 149, 243);
 	background-color: none;
-}
-
-a:hover {
-	outline: none;
-	background-color: rgba(2, 149, 243, 0.35);
-	border-bottom: 2px solid rgb(2, 149, 243);
 }
 
 .container-button {
@@ -93,9 +93,19 @@ a:hover {
 	justify-content: center;
 }
 
+.button-parent {
+	height: auto;
+	width: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 0;
+	position: relative;
+}
+
 button {
 	padding: 1.15em 2.35em;
-	font-size: 1rem;
+	font-size: 1.15rem;
 	border: none;
 	border-radius: 3.5em;
 	background-color: transparent;
@@ -104,11 +114,13 @@ button {
 	align-items: center;
 	justify-content: center;
 	cursor: pointer;
-	transition: 250ms background-color, 250ms color;
+	transition: 150ms background-color, 150ms color, font-size 150ms, margin 150ms, border 150ms;
+	position: relative;
+	border: 2px solid transparent;
 }
 
 .button-primary-main {
-	margin-right: 1.35em;
+	margin-right: 2.35rem;
 	font-weight: 700;
 	color: rgb(30, 33, 38);
 	background-color: rgb(255, 255, 255);
@@ -128,10 +140,14 @@ button {
 
 .button-primary-main:hover,
 .button-primary:hover {
+	margin: -0.5rem;
+	margin-left: -1.5rem;
+	margin-right: 1.35rem;
 	color: white;
-	background-color: rgb(2, 149, 243);
+	font-size: 1.35rem;
+	background-color: rgba(2, 149, 243, 0.5);
 	outline: none;
-	border-color: rgb(2, 149, 243);
+	border-color: transparent;
 }
 
 .button-primary-main:focus,
@@ -177,7 +193,7 @@ button {
 	outline: none;
 	margin-left: calc((100% - 3.35rem - 0.85rem - 0.2rem) / 2 - 10rem);
 	font-size: 3.35rem;
-	background-color: rgba(2, 149, 243, 0.35);
+	background-color: rgba(2, 149, 243, 0.5);
 }
 
 .button-scroll:focus {

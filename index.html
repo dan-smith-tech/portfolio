@@ -13,11 +13,11 @@
     <body>
         <main>
             <section class="section-center" id="landing">
-                <h1>Dan J Smith</h1>
+                <h1>Dan Smith</h1>
                 <h3>I'm a... <span id="skill"></span></h3>
                 <div class="container-button">
-                    <button class="button-primary-main" onclick="scrollToSection(document.querySelector('#selected-work'))">VIEW MY WORK <i class="fas fa-angle-double-down"></i></button>
-                    <button class="button-primary" onclick="window.open('https://squaresheepstudios.com/portfolio')">COMPLETE PORTFOLIO</button>
+                    <div class="button-parent"><button class="button-primary-main" onclick="scrollToSection(document.querySelector('#selected-work'))">VIEW MY WORK <i class="fas fa-angle-double-down"></i></button></div>
+                    <div class="button-parent"><button class="button-primary" onclick="window.open('https://squaresheepstudios.com/portfolio')">COMPLETE PORTFOLIO</button></div>
                 </div>
                 <button class="button-scroll" onclick="scrollToSection(document.querySelector('#about'))"><i class="fas fa-chevron-down"></i></button>
             </section>
@@ -36,7 +36,7 @@
             <section id="contact">
                 <h4>CONTACT</h4>
                 <h2><span>Let's connect,</span><span>and get in touch.</span></h2>
-                <form method="POST" name="Contact" data-netlify="true">
+                <form method="POST" name="Contact" data-netlify="true" netlify-honeypot="bot-field">
                     <div class="form-row">
                         <div class="form-row-element form-row-element-spacer">
                             <label for="name">Name</label>
@@ -78,7 +78,7 @@
             <canvas></canvas>
         </main>
         <footer>
-            © Copyright 2021, Dan J Smith
+            © Copyright 2021, Dan Smith
         </footer>
         <script src="main.js"></script>
         <script async defer src="https://scripts.simpleanalyticscdn.com/latest.js"></script>
