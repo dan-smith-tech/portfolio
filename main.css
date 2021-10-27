@@ -166,16 +166,23 @@ button {
 }
 
 .button-secondary {
+	font-size: 1rem;
 	font-weight: 700;
 	color: rgb(255, 255, 255);
 	background-color: rgb(2, 149, 243);
 }
 
-.button-secondary:hover,
+.button-secondary:hover {
+	margin: -0.35rem -0.65rem;
+	color: white;
+	font-size: 1.15rem;
+	background-color: rgba(2, 149, 243, 0.5);
+	outline: none;
+	border-color: transparent;
+}
+
 .button-secondary:focus {
-	color: rgb(2, 149, 243);
-	background-color: white;
-	outline: 0.2rem solid rgb(2, 149, 243);	
+	outline: 0.2rem solid white;
 }
 
 .button-scroll {
@@ -241,6 +248,10 @@ label {
 	color: rgb(30, 33, 38);
 	background-color: rgb(255, 255, 255);
 	border: none;
+}
+
+.form-element-input:hover {
+	background-color: rgba(255, 255, 255, 0.85);
 }
 
 .form-element-input:focus {

@@ -39,22 +39,22 @@
                 <form method="POST" name="Contact" data-netlify="true" netlify-honeypot="bot-field">
                     <div class="form-row">
                         <div class="form-row-element form-row-element-spacer">
-                            <label for="name">Name</label>
-                            <input type="text" name="name" id="name" placeholder="Dan Smith" class="form-element-input">
+                            <label for="name">Name*</label>
+                            <input type="text" name="name" id="name" placeholder="Dan Smith" class="form-element-input" required>
                         </div>
                         <div class="form-row-element">
-                            <label for="email-contact">Email</label>
-                            <input type="email" name="email" id="email-contact" placeholder="hello@example.com" class="form-element-input">
+                            <label for="email-contact">Email*</label>
+                            <input type="email" name="email" id="email-contact" placeholder="hello@example.com" class="form-element-input" required>
                         </div>
                     </div>
                     <div class="form-row">
                         <div class="form-row-element">
-                            <label for="message">Message</label>
-                            <textarea type="text" name="message" id="message" placeholder="Hi there," class="form-element-input form-element-input-large"></textarea>
+                            <label for="message">Message*</label>
+                            <textarea type="text" name="message" id="message" placeholder="Hi there," class="form-element-input form-element-input-large" required></textarea>
                         </div>
                     </div>
                     <div class="container-button-center">
-                        <button class="button-secondary">SEND MESSAGE</button>
+                        <div class="button-parent"><button class="button-secondary">SEND MESSAGE</button></div>
                     </div>                    
                 </form>
                 <button class="button-scroll" onclick="scrollToSection(document.querySelector('#newsletter'))"><i class="fas fa-chevron-down"></i></button>
@@ -66,11 +66,11 @@
                 <form action="" method="POST">
                     <div class="form-row form-row-inline">
                         <div class="form-row-element form-row-element-spacer">
-                            <input type="email" name="email" id="email-newsletter" placeholder="Enter your email..." class="form-element-input">
+                            <input type="email" name="email" id="email-newsletter" placeholder="Enter your email..." class="form-element-input" required>
                             <small>No spam. Unsubscribe at any time.</small>
                         </div>
                         <div class="form-row-element" id="button-signup">
-                            <button class="button-secondary">SIGNUP</button>
+                            <div class="button-parent"><button class="button-secondary">SIGNUP</button></div>
                         </div>
                     </div>
                 </form>
