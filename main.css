@@ -11,6 +11,7 @@ section {
 	min-height: 100vh;
 	/* height: 100%; */
 	padding-top: 8.5em;
+	padding-bottom: 10em;
 	padding-left: 10rem;
 	box-sizing: border-box;
 	display: flex;
@@ -306,7 +307,7 @@ footer {
 /* About */
 .container-awards {
 	width: 35rem;
-	padding: 1.85em 0;
+	padding-top: 1.85em;
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -343,7 +344,6 @@ footer {
 .container-work {
 	width: 73.5rem;
 	/* width: calc(100% - 10rem); */
-	margin-bottom: 5em;
 }
 
 .work {
@@ -360,6 +360,10 @@ footer {
 	margin-top: 8.5em;
 }
 
+.work:last-child {
+	margin-bottom: 5em;
+}
+
 .work:hover {
 	background-color: transparent;
 	border: none;
@@ -367,7 +371,13 @@ footer {
 
 .work-title {
 	font-size: 1.65rem;
-	font-weight: 700;	
+	font-weight: 700;
+	margin-top: 0;
+}
+
+.work-title i {
+	font-size: 0.85rem;
+	margin-top: -0.35rem;
 }
 
 .work-description {
