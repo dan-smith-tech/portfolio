@@ -9,9 +9,8 @@
 section {
 	width: 100%;
 	min-height: 100vh;
-	/* height: 100%; */
 	padding-top: 8.5em;
-	padding-bottom: 10em;
+	padding-bottom: 10rem;
 	padding-left: 10rem;
 	box-sizing: border-box;
 	display: flex;
@@ -162,11 +161,6 @@ button {
 	color: white;
 }
 
-.button-primary-main:focus i,
-.button-primary:focus i {
-	
-}
-
 .button-secondary {
 	font-size: 1rem;
 	font-weight: 700;
@@ -218,7 +212,7 @@ form {
 .form-row {
 	width: 100%;
 	display: flex;
-	margin-bottom: 1.5em;
+	margin-bottom: 1.85em;
 }
 
 .form-row-inline {
@@ -289,6 +283,10 @@ footer {
 
 
 /* Landing */
+#landing {
+	padding-top: 10rem;
+}
+
 #skill {
 	color: rgb(2, 149, 243);
 	font-weight: 700;
@@ -343,7 +341,6 @@ footer {
 /* Work */
 .container-work {
 	width: 73.5rem;
-	/* width: calc(100% - 10rem); */
 }
 
 .work {
