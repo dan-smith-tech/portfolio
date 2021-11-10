@@ -7,6 +7,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;700&display=swap" rel="stylesheet">
+        <link rel="shortcut icon" type="image/x-icon" href="images/favicon.svg">
         <link rel="stylesheet" href="main.css">
         <title>Dan Smith</title>
     </head>
@@ -24,13 +25,11 @@
             <section id="about">
                 <h4>ABOUT</h4>
                 <h2><span>Eat. Sleep.</span><span>Learn. Repeat.</span></h2>
-                <p>
-                    My interest in how things work has driven me into building a range of digital tech. Full-stack websites, software, whilst my passion for games has led me to start creating them.
-                </p>
+                <p>My interest in how things work has driven me into building a range of digital tech; including full-stack websites, software, and neural networks, whilst my passion for games has led me to start creating them.</p>
                 <div class="container-awards">
-                    <div class="image-parent-award"><a class="image-award" href="https://www.cssdesignawards.com/sites/squaresheep-studios/38760" target="_blank"><img src="images/awards/cssda-best-innovation.png" alt=""></a></div>
-                    <div class="image-parent-award"><a class="image-award" href="https://www.cssdesignawards.com/sites/squaresheep-studios/38760" target="_blank"><img src="images/awards/cssda-best-ux.png" alt=""></a></div>
-                    <div class="image-parent-award"><a class="image-award" href="https://www.cssdesignawards.com/sites/squaresheep-studios/38760" target="_blank"><img src="images/awards/cssda-best-ui.png" alt="" ></a></div>
+                    <div class="image-parent-award"><a class="image-award" href="https://cssdesignawards.com/sites/squaresheep-studios/38760" target="_blank"><img src="images/awards/cssda-best-innovation.png" alt=""></a></div>
+                    <div class="image-parent-award"><a class="image-award" href="https://cssdesignawards.com/sites/squaresheep-studios/38760" target="_blank"><img src="images/awards/cssda-best-ux.png" alt=""></a></div>
+                    <div class="image-parent-award"><a class="image-award" href="https://cssdesignawards.com/sites/squaresheep-studios/38760" target="_blank"><img src="images/awards/cssda-best-ui.png" alt="" ></a></div>
                 </div>
                 <button class="button-scroll" onclick="scrollToSection(document.querySelector('#selected-work'))"><i class="fas fa-chevron-down"></i></button>
             </section>
@@ -38,7 +37,7 @@
                 <h4>SELECTED WORK</h4>
                 <h2><span>Talk is cheap.</span><span>Show me the code.</span></h2>
                 <div class="container-work">
-                    <a class="work" href="#">
+                    <a class="work" href="https://item-resources.com" target="_blank">
                         <div>
                             <h3 class="work-title">The Nation of Makers Resource Library <i class="fas fa-external-link-alt"></i></h3>
                             <p class="work-description">
@@ -48,7 +47,7 @@
                         </div>                       
                         <div class="container-work-image"><img class="work-image" src="images/work/nation-of-makers-resource-library-thumbnail.png" alt=""></div>
                     </a>
-                    <a class="work work-right" href="#">
+                    <a class="work work-right" href="https://squaresheepstudios.com/" target="_blank">
                         <div>
                             <h3 class="work-title">SquareSheep Studios <i class="fas fa-external-link-alt"></i></h3>
                             <p class="work-description">
@@ -90,11 +89,11 @@
             <section id="newsletter">
                 <h4>NEWSLETTER</h4>
                 <h2><span>Gimme</span><span>MORE!</span></h2>
-                <p>Keep up to date with all the new projects, blog posts, skills, and technology I learn over at my portfolio website, <a href="#">SquareSheep Studios</a>.</p>
-                <form action="" method="POST">
+                <p>Keep up to date with all the new projects, blog posts, skills, and technology I learn over at my portfolio website, <a href="https://squaresheepstudios.com" target="_blank">SquareSheep Studios</a>.</p>
+                <form action="https://squaresheepstudios.com/newsletter/signup" method="POST">
                     <div class="form-row form-row-inline">
                         <div class="form-row-element form-row-element-spacer">
-                            <input type="email" name="email" id="email-newsletter" placeholder="Enter your email..." class="form-element-input" required>
+                            <input type="email" name="signup[email]" id="email-newsletter" placeholder="Enter your email..." class="form-element-input" required>
                             <small>No spam. Unsubscribe at any time.</small>
                         </div>
                         <div class="button-parent button-secondary"><button>SIGNUP</button></div>
