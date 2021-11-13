@@ -8,6 +8,7 @@
     <img src="https://api.netlify.com/api/v1/badges/d39037ef-9048-4ee0-9bb9-900efe2bac76/deploy-status" alt="Netlify Status" />
   </a>
 </div>
+<br>
 <div>
   <h2>Forking Guidelines & License Notice</h2>
   <p>I am a big believer in open source and encourage people to use and customise this as a template. However, if you use a substantial amount of this project then I kindly ask you to provide credit to me and this repository.</p>
