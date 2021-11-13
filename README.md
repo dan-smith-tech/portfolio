@@ -9,6 +9,6 @@
   </a>
 </div>
 <div>
-  <h1>Forking Guidelines</h1>
+  <h2>Forking Guidelines</h2>
   <p>I am a big believer in open source and encourage people to use and customise this as a template. However, if you use a substantial amount of this project then I kindly ask you to provide credit to me and this repository.</p>
 </div>
