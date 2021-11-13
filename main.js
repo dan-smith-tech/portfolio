@@ -55,7 +55,94 @@ function generateRandomIndex(min, max, ignore) {
 
 
 //Cycling Tools Animation
+window.onscroll = () => {
+    var infoTop = document.querySelector('.info-top');
+    var infoBottom = document.querySelector('.info-bottom');
 
+    if(window.scrollY >= window.innerHeight) {
+        infoTop.classList.add("info-scroll-top");
+    } else {
+        infoTop.classList.remove("info-scroll-top");
+    }
+
+    if(window.scrollY >= document.documentElement.scrollHeight - 2 * window.innerHeight - 56) {
+        infoBottom.classList.add("info-scroll-bottom");
+    } else {
+        infoBottom.classList.remove("info-scroll-bottom");
+    }
+};
+
+const tools = [
+    "HTML / CSS",
+    "JavaScript",
+    "Node.js",
+    "MongoDB",
+    "Python",
+    "Unity",
+    "C#",
+    "Photoshop",
+    "Blender",
+];
+
+var currentTools = [];
+currentTools = tools;
+
+var listElementsTop = document.querySelectorAll(".info-top .info-tools-element");
+var listElementsBottom = document.querySelectorAll(".info-bottom .info-tools-element");
+
+function cycle() {
+    lastElement = currentTools[currentTools.length - 1];
+    currentTools.pop();
+    currentTools.unshift(lastElement);
+    updateList();
+}
+
+function updateList() {
+    for (i = 0; i < listElementsTop.length; i++) {
+        listElementsTop[i].textContent = currentTools[i];
+        listElementsBottom[i].textContent = currentTools[i];
+    }
+    removeMoving();
+
+    listElementsTop[0].style.opacity = "0";
+    listElementsTop[0].classList.remove("info-tools-element-fade-in");
+    listElementsBottom[0].style.opacity = "0";
+    listElementsBottom[0].classList.remove("info-tools-element-fade-in");
+    setTimeout(() => {
+        addMoving();        
+        listElementsTop[0].classList.add("info-tools-element-fade-in");
+        listElementsBottom[0].classList.add("info-tools-element-fade-in");
+    }, 1);
+    listElementsTop[8].style.opacity = "1";
+    listElementsTop[8].classList.remove("info-tools-element-fade-out");
+    listElementsBottom[8].style.opacity = "1";
+    listElementsBottom[8].classList.remove("info-tools-element-fade-out");
+    setTimeout(() => {        
+        listElementsTop[8].classList.add("info-tools-element-fade-out");
+        listElementsBottom[8].classList.add("info-tools-element-fade-out");
+    }, 1000);
+}
+
+function addMoving() {
+    document.querySelectorAll(".info-tools").forEach(tool => {
+        tool.classList.add("moving");
+    });
+    listElementsTop[4].classList.add("info-tools-element-selected");
+    listElementsBottom[4].classList.add("info-tools-element-selected");
+    setTimeout(() => {
+        listElementsTop[4].classList.remove("info-tools-element-selected");
+        listElementsBottom[4].classList.remove("info-tools-element-selected");
+    }, 1000);
+}
+
+function removeMoving() {
+    document.querySelectorAll(".info-tools").forEach(tool => {
+        tool.classList.remove("moving");
+    });}
+
+cycle();
+setInterval(cycle, 2000);
+  
 
 
 // Canvas Animation
