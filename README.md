@@ -9,7 +9,9 @@
   </a>
 </div>
 <br>
+<br>
+<br>
 <div>
-  <h2>Forking Guidelines & License Notice</h2>
+  <h3>Forking Guidelines & License Notice</h3>
   <p>I am a big believer in open source and encourage people to use and customise this as a template. However, if you use a substantial amount of this project then I kindly ask you to provide credit to me and this repository.</p>
 </div>
