@@ -6,4 +6,5 @@
 </h1>
 <p align="center">
   A 100% vanilla HTML, CSS, and JavaScript static website, hosted with <a href="https://www.netlify.com/" target="_blank">Netlify</a>.
+  [![Netlify Status](https://api.netlify.com/api/v1/badges/d39037ef-9048-4ee0-9bb9-900efe2bac76/deploy-status)](https://app.netlify.com/sites/dan-smith/deploys)
 </p>
