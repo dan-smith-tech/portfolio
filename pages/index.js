@@ -126,6 +126,7 @@ function Landing() {
 			<Section subheading={"CONTACT"} heading={"Let's connect, and get in touch."}>
 				<div className={"container-content"}>
 					<form method="POST" action="/form/success" name="Contact" data-netlify="true" netlify-honeypot="bot-field" netlify>
+						<input type="hidden" name="form-name" value="Contact" />
 						<div className={"form-row"}>
 							<div className={"form-element"}>
 								<label htmlFor="name">Name*</label>
