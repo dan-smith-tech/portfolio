@@ -1,0 +1,91 @@
+.container {
+	position: fixed;
+	inset: 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: var(--color-secondary-translucent);
+	z-index: 1001 !important;
+}
+
+.element {
+	max-width: 28rem;
+	width: 100%;
+	padding: 2.5rem;
+	border-radius: 0.65em;
+	background-color: var(--color-neutral-white);
+	color: var(--color-secondary);
+	position: relative;
+	z-index: 1001 !important;
+}
+
+.title {
+	margin-bottom: 0.35em;
+	color: var(--color-secondary);
+}
+
+.body {
+	margin-bottom: 1.65em;
+	color: var(--color-secondary);
+}
+
+.button-close {
+	padding: 0.15em 0.35em;
+	position: absolute;
+	top: 1.1rem;
+	right: 1.1rem;
+	border: none;
+	border-radius: 0.65em;
+	background-color: transparent;
+	font-size: 1.15rem;
+	color: var(--color-secondary-blue);
+}
+
+.button-close:hover {
+	background-color: var(--color-neutral-grey);
+}
+
+.button-close:active {
+	opacity: 0.35;
+}
+
+.button-close:focus {
+	outline: var(--border-size) solid var(--color-primary);
+}
+
+.container-button {
+	width: fit-content;
+	margin: 0 auto;
+}
+
+.container-button button {
+	width: 18em;
+}
+
+.container-button button:focus {
+	outline-color: var(--color-secondary);
+}
+
+@media (max-width: 650px), (max-height: 350px) {
+	.container {
+		display: block;
+		overflow-y: scroll;
+	}
+
+	.element {
+		max-width: 100%;
+		height: fit-content;
+		box-sizing: border-box;
+		border-radius: 0;
+	}
+
+	.container-button {
+		width: 100%;
+		margin: 0;
+	}
+
+	.container-button button {
+		width: 100%;
+		font-size: 1rem;
+	}
+}

@@ -1,0 +1,23 @@
+.container-full {
+	background-color: var(--color-secondary);
+}
+
+.container-partial {
+	display: flex;
+	justify-content: space-between;
+}
+
+.container-partial p {
+	margin: 0;
+}
+
+@media (max-width: 850px) {
+	.container-partial {
+		padding-top: 3.15em !important;
+		flex-direction: column;
+	}
+
+	.container-partial p:first-child {
+		margin-bottom: 1.15em;
+	}
+}

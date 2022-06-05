@@ -1,0 +1,19 @@
+{
+	"name": "dan-smith-website",
+	"version": "1.0.0",
+	"description": "",
+	"main": "app.js",
+	"scripts": {
+		"dev": "next dev",
+		"build": "next build",
+		"start": "next start",
+		"lint": "next lint"
+	},
+	"author": "Dan Smith",
+	"license": "ISC",
+	"dependencies": {
+		"next": "^12.1.4",
+		"react-dom": "^18.0.0",
+		"sharp": "^0.30.3"
+	}
+}

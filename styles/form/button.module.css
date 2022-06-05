@@ -1,0 +1,52 @@
+.element {
+	width: 16rem;
+	height: 4.25rem;
+	box-sizing: border-box;
+	border: none;
+	border-radius: 2.5em;
+	font-size: 1.15rem;
+	font-weight: 600;
+	flex-grow: 0;
+	cursor: pointer;
+	transition-property: transform, opacity;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+}
+
+.element:hover {
+	transform: scale(1.15);
+	opacity: 0.75;
+}
+
+.element:active {
+	opacity: 0.35;
+}
+
+.element-primary {
+	background-color: var(--color-primary);
+	color: var(--color-neutral-white);
+}
+
+.element-primary:focus {
+	outline: var(--border-size) solid var(--color-neutral-white);
+}
+
+.element-secondary {
+	background-color: transparent;
+	color: var(--color-neutral-white);
+	border: var(--border-size) solid var(--color-neutral-white);
+}
+
+.element-secondary:focus {
+	outline: var(--border-size) solid var(--color-primary);
+}
+
+@media (max-width: 650px) {
+	.element {
+		width: 100%;
+	}
+
+	.element:hover {
+		transform: scale(1.1);
+	}
+}
