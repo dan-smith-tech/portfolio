@@ -39,7 +39,8 @@ export default function Skills({ collapsible }) {
 	}
 
 	const getSkillStyles = (i) => {
-		if (i === currentSkill) return skillsStyles["content-element"] + " " + skillsStyles["content-element-select"];
+		if (i === currentSkill)
+			return skillsStyles["content-element"] + " " + skillsStyles["content-element-select"];
 		if (Math.abs(i - currentSkill) <= 2) {
 			if (i < currentSkill) return skillsStyles["content-element"];
 			return skillsStyles["content-element"];
@@ -54,7 +55,14 @@ export default function Skills({ collapsible }) {
 	}, []);
 
 	return (
-		<div className={!collapsible ? skillsStyles["container-main"] : skillsStyles["container-main"] + " " + skillsStyles["container-main-collapsible"]} ref={containerMain}>
+		<div
+			className={
+				!collapsible
+					? skillsStyles["container-main"]
+					: skillsStyles["container-main"] + " " + skillsStyles["container-main-collapsible"]
+			}
+			ref={containerMain}
+		>
 			<div className={skillsStyles["container-content"]}>
 				<ul className={skillsStyles["list"] + " " + skillsStyles["content"]}>
 					{skills &&

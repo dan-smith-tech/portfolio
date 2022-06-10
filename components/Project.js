@@ -27,9 +27,11 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 	};
 
 	const getImageStyles = (i) => {
-		if (i === currentImage) return projectStyles["container-image"] + " " + projectStyles["container-image-current"];
+		if (i === currentImage)
+			return projectStyles["container-image"] + " " + projectStyles["container-image-current"];
 		if (Math.abs(i - currentImage) === 1) {
-			if (i < currentImage) return projectStyles["container-image"] + " " + projectStyles["container-image-back-previous"];
+			if (i < currentImage)
+				return projectStyles["container-image"] + " " + projectStyles["container-image-back-previous"];
 			return projectStyles["container-image"] + " " + projectStyles["container-image-back-next"];
 		}
 		return projectStyles["container-image"] + " " + projectStyles["container-image-hidden"];
@@ -70,7 +72,12 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 				{images &&
 					images.map((image, i) => (
 						<div className={getImageStyles(i)} onClick={() => selectImage(i)} key={i}>
-							<Image src={image} layout="fill" className={projectStyles["image"]} draggable="false" />
+							<Image
+								src={"/images/projects/" + image}
+								layout="fill"
+								className={projectStyles["image"]}
+								draggable="false"
+							/>
 						</div>
 					))}
 			</div>
@@ -93,7 +100,11 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 				View Project{" "}
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
 					{/* <path fill="#0295f3" fillOpacity="1" d="m19 12-7-6v5H6v2h6v5z"></path> */}
-					<path fill="#0295f3" fillOpacity="1" d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h5v-2H4V7h16v12h-5v2h5c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"></path>
+					<path
+						fill="#0295f3"
+						fillOpacity="1"
+						d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h5v-2H4V7h16v12h-5v2h5c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"
+					></path>
 					<path fill="#0295f3" fillOpacity="1" d="M13 21v-5h3l-4-5-4 5h3v5z"></path>
 				</svg>
 			</a>

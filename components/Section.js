@@ -34,7 +34,10 @@ export default function Button({ subheading, heading, children }) {
 	}, []);
 
 	return (
-		<div className={"container-full " + sectionStyles["container-full"]} id={subheading.toString().toLowerCase()}>
+		<div
+			className={"container-full " + sectionStyles["container-full"]}
+			id={subheading.toString().toLowerCase()}
+		>
 			<div className={"container-partial " + sectionStyles["container-partial"]}>
 				<div className={"container-content "} ref={intersectionDetectorRef}>
 					<h4 className={getSubheadingStyles()}>{subheading}</h4>

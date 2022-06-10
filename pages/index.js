@@ -45,7 +45,8 @@ function Landing() {
 		var topSecond = (window.innerHeight - skillsElementHeight) / 2;
 		skillsElementSecond.style.top = topSecond + "px";
 		// Position the container at the bottom of the page to align with the sections defined above:
-		var topContainerSecond = splashSection.current.clientHeight + aboutSection.clientHeight + workSection.clientHeight;
+		var topContainerSecond =
+			splashSection.current.clientHeight + aboutSection.clientHeight + workSection.clientHeight;
 		skillsElementContainerSecond.style.top = topContainerSecond + topSecond + "px";
 		// Add buffer to the top and bottom of the container to keep the element centered in the screen when the sticky positioning disengages:
 		skillsElementContainerSecond.style.height = totalHeightSectionSecond - topSecond * 2 + "px";
@@ -109,8 +110,14 @@ function Landing() {
 			<Skills collapsible={true} />
 			<Section subheading={"ABOUT"} heading={"UX is my passion, programming is my hobby."}>
 				<div className={"container-content"}>
-					<p>I love creating minimalist, modern, and enjoyable experiences. I believe the best UX exists where the least UI does, so the UI that does exist must be outstanding.</p>
-					<p>I believe that innovation can only truly happen when technology is developed by a multitude of diverse people, and I therefore strive to partake in and support open-source wherever I can.</p>
+					<p>
+						I love creating minimalist, modern, and enjoyable experiences. I believe the best UX exists where
+						the least UI does, so the UI that does exist must be outstanding.
+					</p>
+					<p>
+						I believe that innovation can only truly happen when technology is developed by a multitude of
+						diverse people, and I therefore strive to partake in and support open-source wherever I can.
+					</p>
 					<Awards />
 				</div>
 			</Section>
@@ -119,8 +126,15 @@ function Landing() {
 					heading="Bevl"
 					summary="Built with Node.js, Express.js, and MongoDb, Bevl is a simple, personal planner app. I built Bevl to facilitate my planning philospphy, which involves assigning ambiguous chunks of time to tasks, as making hyper-specific plans are not realistic."
 					link="https://bevl.app"
-					images={["/images/projects/bevl/website.png", "/images/projects/bevl/dashboard.png", "/images/projects/bevl/labels.png"]}
+					images={["bevl/website.png", "bevl/dashboard.png", "bevl/labels.png"]}
 					imageFirst={true}
+				/>
+				<Project
+					heading="Shelf"
+					summary="Built in vanilla HTML, Shelf is a fully customisable, open-source browser startscreen that I made to display the relative importancy/priotity of bookmarks by their size."
+					link="https://bevl.app"
+					images={["shelf/demo.png", "shelf/layouts.png", "shelf/colour.png", "shelf/loading.png"]}
+					imageFirst={false}
 				/>
 			</Section>
 			<Section subheading={"CONTACT"} heading={"Let's connect, and get in touch."}>
@@ -160,7 +174,8 @@ function Landing() {
 							<a href="https://bevl.app" target={"_blank"}>
 								bevl.app
 							</a>
-							, I'm woking on a minimalist, interactive personal planner. Sign up to this newsletter to stay up to date with its progress and get an exclusive deal at launch.
+							, I'm woking on a minimalist, interactive personal planner. Sign up to this newsletter to stay
+							up to date with its progress and get an exclusive deal at launch.
 						</p>
 						<div className={"form-row"}>
 							<div className={"form-element"}>
@@ -175,7 +190,9 @@ function Landing() {
 						show={showNewsletterModal}
 						onClose={() => setShowNewsletterModal(false)}
 						heading={"Confirm Subscription"}
-						body={"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."}
+						body={
+							"Thank you for signing up to the newsletter! Please confirm your subscription through the email you have been sent."
+						}
 						buttonValue={"I've Confirmed My Email"}
 					/>
 				</div>

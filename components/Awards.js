@@ -7,7 +7,11 @@ export default function Awards({}) {
 	const [currentAward, setCurrentAward] = useState(0);
 	const containerMain = useRef();
 
-	const awards = [{ image: "cssda-best-innovation.png" }, { image: "cssda-best-ui.png" }, { image: "cssda-best-ux.png" }];
+	const awards = [
+		{ image: "cssda-best-innovation.png" },
+		{ image: "cssda-best-ui.png" },
+		{ image: "cssda-best-ux.png" },
+	];
 
 	function nextAward() {
 		setCurrentAward((currentAward) => {
@@ -31,7 +35,10 @@ export default function Awards({}) {
 	const getAwardStyles = (i) => {
 		if (i === currentAward) return awardsStyles["award"] + " " + awardsStyles["award-current"];
 		if (Math.abs(i - currentAward) === 1) {
-			if (i < currentAward) return awardsStyles["award"] + " " + awardsStyles["award-back"] + " " + awardsStyles["award-back-previous"];
+			if (i < currentAward)
+				return (
+					awardsStyles["award"] + " " + awardsStyles["award-back"] + " " + awardsStyles["award-back-previous"]
+				);
 			return awardsStyles["award"] + " " + awardsStyles["award-back"] + " " + awardsStyles["award-back-next"];
 		}
 		return awardsStyles["award"] + " " + awardsStyles["award-hidden"];
@@ -50,7 +57,12 @@ export default function Awards({}) {
 					awards.map((award, i) => (
 						<div className={getAwardStyles(i)} key={i}>
 							<div className={awardsStyles["container-image"]}>
-								<Image src={"/images/awards/" + award.image} layout="fill" className={awardsStyles["image"]} draggable="false" />
+								<Image
+									src={"/images/awards/" + award.image}
+									layout="fill"
+									className={awardsStyles["image"]}
+									draggable="false"
+								/>
 							</div>
 						</div>
 					))}

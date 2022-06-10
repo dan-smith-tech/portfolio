@@ -6,7 +6,12 @@ export default function Occupations({}) {
 	const [currentOccupation, setCurrentOccupation] = useState(0);
 	const containerMain = useRef();
 
-	const occupations = [{ name: "Machine Learning Enthusiast" }, { name: "Software Engineer" }, { name: "Front-End Web Developer" }, { name: "Full-Stack Web Developer" }];
+	const occupations = [
+		{ name: "Machine Learning Enthusiast" },
+		{ name: "Software Engineer" },
+		{ name: "Front-End Web Developer" },
+		{ name: "Full-Stack Web Developer" },
+	];
 
 	function nextOccupation() {
 		setCurrentOccupation((currentOccupation) => {
@@ -28,7 +33,8 @@ export default function Occupations({}) {
 	}
 
 	const getOccupationStyles = (i) => {
-		if (i === currentOccupation) return occupationsStyles["content-element"] + " " + occupationsStyles["content-element-select"];
+		if (i === currentOccupation)
+			return occupationsStyles["content-element"] + " " + occupationsStyles["content-element-select"];
 		return occupationsStyles["content-element"] + " " + occupationsStyles["content-element-hidden"];
 	};
 
