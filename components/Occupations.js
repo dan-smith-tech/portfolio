@@ -25,9 +25,6 @@ export default function Occupations({}) {
 			const offset = (containerMain.current.clientHeight - height) / 2 - i * height;
 			containerMain.current.children[0].style.marginTop = offset + "px";
 
-			// Change the title of the page in time with the carousel:
-			document.title = "Dan Smith • " + occupations[i].name + " Portfolio";
-
 			return i;
 		});
 	}
