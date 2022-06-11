@@ -77,8 +77,11 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 								layout="fill"
 								className={projectStyles["image"]}
 								draggable="false"
+								loading={"eager"}
 								quality={82}
-								blurDataURL={"base64,L16QV%BPMwo~=rWrInRj}uR-Ios+"}
+								blurDataURL={
+									"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN0EjWsBwACMgEJHSsnmQAAAABJRU5ErkJggg=="
+								}
 								placeholder={"blur"}
 							/>
 						</div>
