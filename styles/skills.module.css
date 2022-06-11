@@ -10,6 +10,10 @@
 	height: 18em;
 	display: flex;
 	position: sticky;
+
+	overflow-y: hidden;
+	padding-right: 1em;
+	transform: translateX(1em);
 }
 
 .list {
