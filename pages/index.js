@@ -131,7 +131,7 @@ function Landing() {
 				/>
 				<Project
 					heading="Shelf"
-					summary="Built in vanilla HTML, Shelf is a fully customisable, open-source browser startscreen that I made to display the relative importancy/priotity of bookmarks by their size."
+					summary="Built in vanilla HTML, Shelf is a fully customisable, open-source browser startscreen that I made to display the relative importance/priority of bookmarks, by their size."
 					link="https://github.com/dan-smith-tech/shelf"
 					images={["shelf/demo.png", "shelf/layouts.png", "shelf/colour.png", "shelf/loading.png"]}
 					imageFirst={false}
