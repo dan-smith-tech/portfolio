@@ -78,7 +78,7 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 								className={projectStyles["image"]}
 								draggable="false"
 								loading={"eager"}
-								quality={82}
+								quality={85}
 								blurDataURL={
 									"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkmvq5HgAENgILsvB0aAAAAABJRU5ErkJggg=="
 								}
