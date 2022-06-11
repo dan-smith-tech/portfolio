@@ -80,7 +80,7 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 								loading={"eager"}
 								quality={82}
 								blurDataURL={
-									"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mN0EjWsBwACMgEJHSsnmQAAAABJRU5ErkJggg=="
+									"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkmvq5HgAENgILsvB0aAAAAABJRU5ErkJggg=="
 								}
 								placeholder={"blur"}
 							/>
