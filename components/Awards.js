@@ -62,6 +62,12 @@ export default function Awards({}) {
 									layout="fill"
 									className={awardsStyles["image"]}
 									draggable="false"
+									loading={"eager"}
+									quality={85}
+									blurDataURL={
+										"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNkmvq5HgAENgILsvB0aAAAAABJRU5ErkJggg=="
+									}
+									placeholder={"blur"}
 								/>
 							</div>
 						</div>
