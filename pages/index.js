@@ -124,7 +124,7 @@ function Landing() {
 			<Section subheading={"WORK"} heading={"Talk is cheap. Let's get to the good stuff."}>
 				<Project
 					heading="Bevl"
-					summary="Built with Node.js, Express.js, and MongoDb, Bevl is a simple, personal planner app. I built Bevl to facilitate my planning philospphy, which involves assigning ambiguous chunks of time to tasks, as making hyper-specific plans are not realistic."
+					summary="Built with Node.js, Express.js, and MongoDB, Bevl is a simple, personal planner app. I built Bevl to facilitate my planning philosophy; assigning ambiguous chunks of time to tasks, as making hyper-specific plans are not realistic."
 					link="https://bevl.app"
 					images={["bevl/website.png", "bevl/dashboard.png", "bevl/labels.png"]}
 					imageFirst={true}
