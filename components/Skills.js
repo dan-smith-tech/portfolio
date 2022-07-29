@@ -31,8 +31,11 @@ export default function Skills({ collapsible }) {
 			const smallHeight = 46;
 
 			// Center the selected skill vertically in its container (offset it based on the cumulative width of the number of siblings before it):
-			const offset = (containerMain.current.children[0].clientHeight - largeHeight) / 2 - i * smallHeight;
-			containerMain.current.children[0].children[0].style.marginTop = offset + "px";
+			const offset =
+				(containerMain.current.children[0].clientHeight - largeHeight) / 2 -
+				i * smallHeight;
+			containerMain.current.children[0].children[0].style.marginTop =
+				offset + "px";
 
 			return i;
 		});
@@ -40,12 +43,20 @@ export default function Skills({ collapsible }) {
 
 	const getSkillStyles = (i) => {
 		if (i === currentSkill)
-			return skillsStyles["content-element"] + " " + skillsStyles["content-element-select"];
+			return (
+				skillsStyles["content-element"] +
+				" " +
+				skillsStyles["content-element-select"]
+			);
 		if (Math.abs(i - currentSkill) <= 2) {
 			if (i < currentSkill) return skillsStyles["content-element"];
 			return skillsStyles["content-element"];
 		}
-		return skillsStyles["content-element"] + " " + skillsStyles["content-element-hidden"];
+		return (
+			skillsStyles["content-element"] +
+			" " +
+			skillsStyles["content-element-hidden"]
+		);
 	};
 
 	useEffect(() => {
@@ -59,12 +70,16 @@ export default function Skills({ collapsible }) {
 			className={
 				!collapsible
 					? skillsStyles["container-main"]
-					: skillsStyles["container-main"] + " " + skillsStyles["container-main-collapsible"]
+					: skillsStyles["container-main"] +
+					  " " +
+					  skillsStyles["container-main-collapsible"]
 			}
 			ref={containerMain}
 		>
 			<div className={skillsStyles["container-content"]}>
-				<ul className={skillsStyles["list"] + " " + skillsStyles["content"]}>
+				<ul
+					className={skillsStyles["list"] + " " + skillsStyles["content"]}
+				>
 					{skills &&
 						skills.map((skill, i) => (
 							<li className={getSkillStyles(i)} key={i}>
@@ -75,7 +90,11 @@ export default function Skills({ collapsible }) {
 				<ul className={skillsStyles["list"] + " " + skillsStyles["links"]}>
 					<li className={skillsStyles["links-element"]}>
 						<a href={"https://github.com/dan-smith-tech"} target="_blank">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+							>
 								<path
 									fill="#ffffff"
 									fillOpacity="1"
@@ -85,9 +104,22 @@ export default function Skills({ collapsible }) {
 						</a>
 					</li>
 					<li className={skillsStyles["links-element"]}>
-						<a href={"https://www.linkedin.com/in/dan-smith-tech"} target="_blank">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-								<circle fill="#ffffff" fillOpacity="1" cx="4.983" cy="5.009" r="2.188"></circle>
+						<a
+							href={"https://www.linkedin.com/in/dan-smith-tech"}
+							target="_blank"
+						>
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+							>
+								<circle
+									fill="#ffffff"
+									fillOpacity="1"
+									cx="4.983"
+									cy="5.009"
+									r="2.188"
+								></circle>
 								<path
 									fill="#ffffff"
 									fillOpacity="1"
@@ -98,7 +130,11 @@ export default function Skills({ collapsible }) {
 					</li>
 					<li className={skillsStyles["links-element"]}>
 						<a href={"https://codepen.io/dan-smith-tech"} target="_blank">
-							<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
+							<svg
+								xmlns="http://www.w3.org/2000/svg"
+								width="24"
+								height="24"
+							>
 								<path
 									fill="#ffffff"
 									fillOpacity="1"

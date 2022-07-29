@@ -17,7 +17,9 @@ export default function Input({ type, name, placeholder, required }) {
 			<textarea
 				name={name}
 				id={name}
-				className={inputStyles["element"] + " " + inputStyles["element-textarea"]}
+				className={
+					inputStyles["element"] + " " + inputStyles["element-textarea"]
+				}
 				placeholder={placeholder}
 				required={required}
 			></textarea>

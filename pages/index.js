@@ -1,5 +1,6 @@
 import { useRef, useEffect, useState } from "react";
 import Link from "next/link";
+import Script from "next/script";
 
 import Button from "../components/form/Button";
 import Input from "../components/form/Input";
@@ -32,24 +33,31 @@ function Landing() {
 	// Calculate the 'top' value for the skills carousel positioned sticky (the container is sticky) on the right of the screen:
 	function calculateSkillsElementPosition() {
 		// Get the height of the two sections the sticky carousel container needs to vertically fill (splash & 'about'):
-		var totalHeightSectionFirst = splashSection.current.clientHeight + aboutSection.clientHeight;
+		var totalHeightSectionFirst =
+			splashSection.current.clientHeight + aboutSection.clientHeight;
 		// Center the skills carousel vertically on the screen, for the sections defined above:
 		var topFirst = (window.innerHeight - skillsElementHeight) / 2;
 		skillsElementFirst.style.top = topFirst + "px";
 		// Add buffer to the bottom of the container to keep the element centered in the screen when the sticky positioning disengages:
-		skillsElementContainerFirst.style.height = totalHeightSectionFirst - topFirst + "px";
+		skillsElementContainerFirst.style.height =
+			totalHeightSectionFirst - topFirst + "px";
 
 		// Get the height of the two sections the sticky carousel container needs to vertically fill ('contact' & 'newsletter'):
-		var totalHeightSectionSecond = contactSection.clientHeight + newsletterSection.clientHeight;
+		var totalHeightSectionSecond =
+			contactSection.clientHeight + newsletterSection.clientHeight;
 		// Center the skills carousel vertically on the screen, for the sections defined above:
 		var topSecond = (window.innerHeight - skillsElementHeight) / 2;
 		skillsElementSecond.style.top = topSecond + "px";
 		// Position the container at the bottom of the page to align with the sections defined above:
 		var topContainerSecond =
-			splashSection.current.clientHeight + aboutSection.clientHeight + workSection.clientHeight;
-		skillsElementContainerSecond.style.top = topContainerSecond + topSecond + "px";
+			splashSection.current.clientHeight +
+			aboutSection.clientHeight +
+			workSection.clientHeight;
+		skillsElementContainerSecond.style.top =
+			topContainerSecond + topSecond + "px";
 		// Add buffer to the top and bottom of the container to keep the element centered in the screen when the sticky positioning disengages:
-		skillsElementContainerSecond.style.height = totalHeightSectionSecond - topSecond * 2 + "px";
+		skillsElementContainerSecond.style.height =
+			totalHeightSectionSecond - topSecond * 2 + "px";
 	}
 
 	function handleNewsletterSignup(e) {
@@ -57,7 +65,11 @@ function Landing() {
 		const email = e.target.email.value;
 		if (email.length > 0 && isEmail(email)) {
 			setShowNewsletterModal(true);
-			sendFetchRequest("https://bevl.app/api/email?bevlAnnouncements=true", "POST", { email: email });
+			sendFetchRequest(
+				"https://bevl.app/api/email?bevlAnnouncements=true",
+				"POST",
+				{ email: email }
+			);
 			e.target.email.value = null;
 		}
 	}
@@ -76,13 +88,21 @@ function Landing() {
 
 		calculateSkillsElementPosition();
 		window.addEventListener("resize", calculateSkillsElementPosition);
-		return () => window.removeEventListener("resize", calculateSkillsElementPosition);
+		return () =>
+			window.removeEventListener("resize", calculateSkillsElementPosition);
 	}, []);
 
 	return (
 		<>
-			<section className={"container-full " + landingStyles["container-full"]} ref={splashSection}>
-				<div className={"container-partial " + landingStyles["container-partial"]}>
+			<section
+				className={"container-full " + landingStyles["container-full"]}
+				ref={splashSection}
+			>
+				<div
+					className={
+						"container-partial " + landingStyles["container-partial"]
+					}
+				>
 					<div className={"container-content"}>
 						<h1 className={landingStyles["header"]}>
 							<span>Hi, </span>
@@ -108,71 +128,116 @@ function Landing() {
 				</div>
 			</section>
 			<Skills collapsible={true} />
-			<Section subheading={"ABOUT"} heading={"UX is my passion, programming is my hobby."}>
+			<Section
+				subheading={"ABOUT"}
+				heading={"UX is my passion, programming is my hobby."}
+			>
 				<div className={"container-content"}>
 					<p>
-						I love creating minimalist, modern, and enjoyable experiences. I believe the best UX exists where
-						the least UI does, so the UI that does exist must be outstanding.
+						I love creating minimalist, modern, and enjoyable experiences.
+						I believe the best UX exists where the least UI does, so the
+						UI that does exist must be outstanding.
 					</p>
 					<p>
-						I believe that innovation can only truly happen when technology is developed by a multitude of
-						diverse people, and I therefore strive to partake in and support open-source wherever I can.
+						I believe that innovation can only truly happen when
+						technology is developed by a multitude of diverse people, and
+						I therefore strive to partake in and support open-source
+						wherever I can.
 					</p>
 					<Awards />
 				</div>
 			</Section>
-			<Section subheading={"WORK"} heading={"Talk is cheap. Let's get to the good stuff."}>
+			<Section
+				subheading={"WORK"}
+				heading={"Talk is cheap. Let's get to the good stuff."}
+			>
 				<Project
 					heading="Bevl"
 					summary="Built with Node.js, Express.js, and MongoDB, Bevl is a simple, personal planner app. I built Bevl to facilitate my planning philosophy; assigning ambiguous chunks of time to tasks, as making hyper-specific plans are not realistic."
 					link="https://bevl.app"
-					images={["bevl/website.png", "bevl/dashboard.png", "bevl/labels.png"]}
+					images={[
+						"bevl/website.png",
+						"bevl/dashboard.png",
+						"bevl/labels.png",
+					]}
 					imageFirst={true}
 				/>
 				<Project
 					heading="Shelf"
 					summary="Built in vanilla HTML, Shelf is a fully customisable, open-source browser startscreen that I made to display the relative importance/priority of bookmarks, by their size."
 					link="https://github.com/dan-smith-tech/shelf"
-					images={["shelf/loading.png", "shelf/colour.png", "shelf/layouts.png", "shelf/demo.png"]}
+					images={[
+						"shelf/loading.png",
+						"shelf/colour.png",
+						"shelf/layouts.png",
+						"shelf/demo.png",
+					]}
 					imageFirst={false}
 				/>
 			</Section>
-			<Section subheading={"CONTACT"} heading={"Let's connect, and get in touch."}>
+			<Section
+				subheading={"CONTACT"}
+				heading={"Let's connect, and get in touch."}
+			>
 				<div className={"container-content"}>
+					<Script
+						src="https://s.pageclip.co/v1/pageclip.js"
+						charset="utf-8"
+					/>
 					<form
+						action="https://send.pageclip.co/sVwY5zC3nBKBdy7dpP2zHTx9yHDez2Lj/Contact"
 						method={"POST"}
-						name={"Contact"}
-						netlify={true}
-						data-netlify={true}
-						netlify-honeypot={"bot-field"}
+						className={"pageclip-form"}
 					>
 						<input type="hidden" name="form-name" value="Contact" />
 						<div className={"form-row"}>
 							<div className={"form-element"}>
 								<label htmlFor="name">Name*</label>
-								<Input type="text" name="name" placeholder="Enter your name..." required={true} />
+								<Input
+									type="text"
+									name="name"
+									placeholder="Enter your name..."
+									required={true}
+								/>
 							</div>
 							<div className={"form-element"}>
 								<label htmlFor="email">Email*</label>
-								<Input type="text" name="email" placeholder="Enter your email..." required={true} />
+								<Input
+									type="text"
+									name="email"
+									placeholder="Enter your email..."
+									required={true}
+								/>
 							</div>
 						</div>
 						<div className={"form-row"}>
 							<div className={"form-element"}>
 								<label htmlFor="body">Message*</label>
-								<Input type="textarea" name="body" placeholder="Enter your message..." required={true} />
+								<Input
+									type="textarea"
+									name="body"
+									placeholder="Enter your message..."
+									required={true}
+								/>
 							</div>
 						</div>
 						<div className={"form-row"}>
-							<Button type="submit" primary={true}>
-								Send Message
+							<Button
+								type="submit"
+								primary={true}
+								className={"pageclip-form__submit"}
+							>
+								<span>Send Message</span>
 							</Button>
 						</div>
 					</form>
 				</div>
 			</Section>
 			<Skills collapsible={false} />
-			<Section subheading={"NEWSLETTER"} heading={"Stay up to date with my latest projects."}>
+			<Section
+				subheading={"NEWSLETTER"}
+				heading={"Stay up to date with my latest projects."}
+			>
 				<div className={"container-content"}>
 					<form onSubmit={handleNewsletterSignup}>
 						<p className={"form-p"}>
@@ -180,12 +245,18 @@ function Landing() {
 							<a href="https://bevl.app" target={"_blank"}>
 								bevl.app
 							</a>
-							, I'm woking on a minimalist, interactive personal planner. Sign up to this newsletter to stay
-							up to date with its progress and get an exclusive deal at launch.
+							, I'm woking on a minimalist, interactive personal planner.
+							Sign up to this newsletter to stay up to date with its
+							progress and get an exclusive deal at launch.
 						</p>
 						<div className={"form-row"}>
 							<div className={"form-element"}>
-								<Input type="text" name="email" placeholder="Enter your email..." required={true} />
+								<Input
+									type="text"
+									name="email"
+									placeholder="Enter your email..."
+									required={true}
+								/>
 							</div>
 							<Button type="submit" primary={true}>
 								Sign Up

@@ -8,9 +8,13 @@ Error.getInitialProps = ({ res, err }) => {
 function Error({ statusCode }) {
 	return (
 		<div className={errorStyles["container"]}>
-			<div className={errorStyles["code"]}>{statusCode ? statusCode : "Client"}</div>
+			<div className={errorStyles["code"]}>
+				{statusCode ? statusCode : "Client"}
+			</div>
 			<p className={errorStyles["summary"]}>
-				{statusCode ? `A ${statusCode} error occurred on server` : "An error occurred on client"}
+				{statusCode
+					? `A ${statusCode} error occurred on server`
+					: "An error occurred on client"}
 			</p>
 		</div>
 	);

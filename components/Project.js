@@ -3,7 +3,13 @@ import Image from "next/image";
 
 import projectStyles from "../styles/project.module.css";
 
-export default function Project({ heading, summary, link, images, imageFirst }) {
+export default function Project({
+	heading,
+	summary,
+	link,
+	images,
+	imageFirst,
+}) {
 	const [intersection, setIntersection] = useState(false);
 	const [currentImage, setCurrentImage] = useState(0);
 	const containerMain = useRef();
@@ -23,28 +29,57 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 
 	const getImageContainerStyles = () => {
 		if (!intersection) return projectStyles["container-images"];
-		return projectStyles["container-images"] + " " + projectStyles["container-images-animate"];
+		return (
+			projectStyles["container-images"] +
+			" " +
+			projectStyles["container-images-animate"]
+		);
 	};
 
 	const getImageStyles = (i) => {
 		if (i === currentImage)
-			return projectStyles["container-image"] + " " + projectStyles["container-image-current"];
+			return (
+				projectStyles["container-image"] +
+				" " +
+				projectStyles["container-image-current"]
+			);
 		if (Math.abs(i - currentImage) === 1) {
 			if (i < currentImage)
-				return projectStyles["container-image"] + " " + projectStyles["container-image-back-previous"];
-			return projectStyles["container-image"] + " " + projectStyles["container-image-back-next"];
+				return (
+					projectStyles["container-image"] +
+					" " +
+					projectStyles["container-image-back-previous"]
+				);
+			return (
+				projectStyles["container-image"] +
+				" " +
+				projectStyles["container-image-back-next"]
+			);
 		}
-		return projectStyles["container-image"] + " " + projectStyles["container-image-hidden"];
+		return (
+			projectStyles["container-image"] +
+			" " +
+			projectStyles["container-image-hidden"]
+		);
 	};
 
 	const getImageSelectStyles = (i) => {
-		if (i === currentImage) return projectStyles["image-select"] + " " + projectStyles["image-select-current"];
+		if (i === currentImage)
+			return (
+				projectStyles["image-select"] +
+				" " +
+				projectStyles["image-select-current"]
+			);
 		return projectStyles["image-select"];
 	};
 
 	const getInfoContainerStyles = () => {
 		if (!intersection) return projectStyles["container-info"];
-		return projectStyles["container-info"] + " " + projectStyles["container-info-animate"];
+		return (
+			projectStyles["container-info"] +
+			" " +
+			projectStyles["container-info-animate"]
+		);
 	};
 
 	useEffect(() => {
@@ -63,7 +98,8 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 		observer.observe(containerMain.current);
 
 		window.addEventListener("resize", () => selectImage(currentImage));
-		return () => window.removeEventListener("resize", () => selectImage(currentImage));
+		return () =>
+			window.removeEventListener("resize", () => selectImage(currentImage));
 	}, []);
 
 	const imageElement = (
@@ -71,7 +107,11 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 			<div className={projectStyles["images"]}>
 				{images &&
 					images.map((image, i) => (
-						<div className={getImageStyles(i)} onClick={() => selectImage(i)} key={i}>
+						<div
+							className={getImageStyles(i)}
+							onClick={() => selectImage(i)}
+							key={i}
+						>
 							<Image
 								src={"/images/projects/" + image}
 								layout="fill"
@@ -90,7 +130,11 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 			<div className={projectStyles["container-image-select"]}>
 				{images &&
 					images.map((image, i) => (
-						<button className={getImageSelectStyles(i)} onClick={() => selectImage(i)} key={i}>
+						<button
+							className={getImageSelectStyles(i)}
+							onClick={() => selectImage(i)}
+							key={i}
+						>
 							<div></div>
 						</button>
 					))}
@@ -111,7 +155,11 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 						fillOpacity="1"
 						d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h5v-2H4V7h16v12h-5v2h5c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"
 					></path>
-					<path fill="#0295f3" fillOpacity="1" d="M13 21v-5h3l-4-5-4 5h3v5z"></path>
+					<path
+						fill="#0295f3"
+						fillOpacity="1"
+						d="M13 21v-5h3l-4-5-4 5h3v5z"
+					></path>
 				</svg>
 			</a>
 		</div>
@@ -126,7 +174,13 @@ export default function Project({ heading, summary, link, images, imageFirst }) 
 		);
 	else
 		return (
-			<div className={projectStyles["container-main"] + " " + projectStyles["container-main-reorder"]}>
+			<div
+				className={
+					projectStyles["container-main"] +
+					" " +
+					projectStyles["container-main-reorder"]
+				}
+			>
 				{textElement}
 				{imageElement}
 			</div>

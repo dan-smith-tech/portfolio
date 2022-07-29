@@ -9,7 +9,11 @@ export default function Modal({ show, onClose, heading, body, buttonValue }) {
 				<div className={modalStyles["element"]}>
 					<h3 className={modalStyles["title"]}>{heading}</h3>
 					<p className={modalStyles["body"]}>{body}</p>
-					<button className={modalStyles["button-close"]} type="button" onClick={onClose}>
+					<button
+						className={modalStyles["button-close"]}
+						type="button"
+						onClick={onClose}
+					>
 						x
 					</button>
 					<div className={modalStyles["container-button"]}>

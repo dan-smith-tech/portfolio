@@ -1,11 +1,23 @@
 import buttonStyles from "../../styles/form/button.module.css";
 
-export default function Button({ type, onClick, primary, children }) {
+export default function Button({
+	type,
+	onClick,
+	primary,
+	className,
+	children,
+}) {
 	if (primary)
 		return (
 			<button
 				type={type}
-				className={buttonStyles["element"] + " " + buttonStyles["element-primary"]}
+				className={
+					buttonStyles["element"] +
+					" " +
+					buttonStyles["element-primary"] +
+					" " +
+					className
+				}
 				onClick={onClick}
 			>
 				{children}
@@ -15,7 +27,9 @@ export default function Button({ type, onClick, primary, children }) {
 		return (
 			<button
 				type={type}
-				className={buttonStyles["element"] + " " + buttonStyles["element-secondary"]}
+				className={
+					buttonStyles["element"] + " " + buttonStyles["element-secondary"]
+				}
 				onClick={onClick}
 			>
 				{children}

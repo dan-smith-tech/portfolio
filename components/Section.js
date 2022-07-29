@@ -8,7 +8,9 @@ export default function Button({ subheading, heading, children }) {
 
 	const getSubheadingStyles = () => {
 		if (!intersection) return sectionStyles["subheading"];
-		return sectionStyles["subheading"] + " " + sectionStyles["subheading-animate"];
+		return (
+			sectionStyles["subheading"] + " " + sectionStyles["subheading-animate"]
+		);
 	};
 
 	const getHeadingStyles = () => {
@@ -38,7 +40,11 @@ export default function Button({ subheading, heading, children }) {
 			className={"container-full " + sectionStyles["container-full"]}
 			id={subheading.toString().toLowerCase()}
 		>
-			<div className={"container-partial " + sectionStyles["container-partial"]}>
+			<div
+				className={
+					"container-partial " + sectionStyles["container-partial"]
+				}
+			>
 				<div className={"container-content "} ref={intersectionDetectorRef}>
 					<h4 className={getSubheadingStyles()}>{subheading}</h4>
 					<h2 className={getHeadingStyles()}>{heading}</h2>

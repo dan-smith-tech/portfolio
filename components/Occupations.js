@@ -16,13 +16,18 @@ export default function Occupations({}) {
 	function nextOccupation() {
 		setCurrentOccupation((currentOccupation) => {
 			// Make index infinitely loop by setting it back to the first element if it's at the end of the array:
-			const i = currentOccupation === 0 ? occupations.length - 1 : currentOccupation - 1;
+			const i =
+				currentOccupation === 0
+					? occupations.length - 1
+					: currentOccupation - 1;
 
 			// // Get the height of an occupation element:
-			const height = containerMain.current.children[0].children[0].clientHeight;
+			const height =
+				containerMain.current.children[0].children[0].clientHeight;
 
 			// Center the selected occupation vertically in its container (offset it based on the cumulative width of the number of siblings before it):
-			const offset = (containerMain.current.clientHeight - height) / 2 - i * height;
+			const offset =
+				(containerMain.current.clientHeight - height) / 2 - i * height;
 			containerMain.current.children[0].style.marginTop = offset + "px";
 
 			return i;
@@ -31,8 +36,16 @@ export default function Occupations({}) {
 
 	const getOccupationStyles = (i) => {
 		if (i === currentOccupation)
-			return occupationsStyles["content-element"] + " " + occupationsStyles["content-element-select"];
-		return occupationsStyles["content-element"] + " " + occupationsStyles["content-element-hidden"];
+			return (
+				occupationsStyles["content-element"] +
+				" " +
+				occupationsStyles["content-element-select"]
+			);
+		return (
+			occupationsStyles["content-element"] +
+			" " +
+			occupationsStyles["content-element-hidden"]
+		);
 	};
 
 	useEffect(() => {
