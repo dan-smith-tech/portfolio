@@ -162,6 +162,15 @@ label {
 	margin-bottom: 1.5rem;
 }
 
+.pageclip-form__success {
+	background-color: var(--color-secondary);
+	opacity: 0.85;
+}
+
+.pageclip-form__success__message {
+	color: var(--color-neutral-white);
+}
+
 @media (max-width: 1200px) {
 	.container-partial {
 		max-width: calc(50rem + 2 * 2.5rem);
