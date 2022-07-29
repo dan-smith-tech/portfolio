@@ -9,10 +9,6 @@
 	position: relative;
 }
 
-.container-main:last-child {
-	margin-bottom: 0;
-}
-
 .container-images {
 	width: calc(16 * 2em);
 }
@@ -228,6 +224,12 @@
 	.container-info {
 		margin: 0 !important;
 		padding: 0;
+	}
+}
+
+@media (max-height: 850px) {
+	.container-main:last-child {
+		margin-bottom: 0;
 	}
 }
 

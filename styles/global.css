@@ -130,6 +130,10 @@ small {
 	display: block;
 }
 
+:focus:not(:focus-visible) {
+	outline: none !important;
+}
+
 .form-row {
 	margin-bottom: 1.5rem;
 	display: flex;
@@ -163,6 +167,7 @@ label {
 }
 
 .pageclip-form__success {
+	bottom: calc(- var(--border-size));
 	background-color: var(--color-secondary);
 	opacity: 0.85;
 }

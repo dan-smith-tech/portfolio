@@ -97,9 +97,13 @@ export default function Project({
 		});
 		observer.observe(containerMain.current);
 
-		window.addEventListener("resize", () => selectImage(currentImage));
+		window.addEventListener("resize", () =>
+			imageFirst ? selectImage(0) : selectImage(images.length - 1)
+		);
 		return () =>
-			window.removeEventListener("resize", () => selectImage(currentImage));
+			window.removeEventListener("resize", () =>
+				imageFirst ? selectImage(0) : selectImage(images.length - 1)
+			);
 	}, []);
 
 	const imageElement = (

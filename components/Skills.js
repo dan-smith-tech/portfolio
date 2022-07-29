@@ -11,11 +11,13 @@ export default function Skills({ collapsible }) {
 		{ name: "JavaScript" },
 		{ name: "Python" },
 		{ name: "Node.js" },
-		{ name: "React" },
 		{ name: "Next.js" },
+		{ name: "React" },
 		{ name: "Express.js" },
 		{ name: "MongoDB" },
 		{ name: "Mongoose" },
+		{ name: "Figma" },
+		{ name: "Affinity Designer" },
 		{ name: "Unity" },
 		{ name: "C#" },
 	];
@@ -76,7 +78,7 @@ export default function Skills({ collapsible }) {
 			}
 			ref={containerMain}
 		>
-			<div className={skillsStyles["container-content"]}>
+			<div className={skillsStyles["container-content"]} tabIndex={-1}>
 				<ul
 					className={skillsStyles["list"] + " " + skillsStyles["content"]}
 				>

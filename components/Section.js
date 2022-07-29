@@ -39,6 +39,7 @@ export default function Button({ subheading, heading, children }) {
 		<div
 			className={"container-full " + sectionStyles["container-full"]}
 			id={subheading.toString().toLowerCase()}
+			tabIndex={-1}
 		>
 			<div
 				className={

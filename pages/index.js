@@ -157,7 +157,8 @@ function Landing() {
 					link="https://bevl.app"
 					images={[
 						"bevl/website.png",
-						"bevl/dashboard.png",
+						"bevl/tasks.png",
+						"bevl/lists.png",
 						"bevl/labels.png",
 					]}
 					imageFirst={true}
