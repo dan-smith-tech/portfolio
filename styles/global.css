@@ -167,7 +167,7 @@ label {
 }
 
 .pageclip-form__success {
-	bottom: -0.2rem;
+	inset: -0.2rem;
 	background-color: var(--color-secondary);
 	opacity: 0.85;
 }
