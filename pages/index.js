@@ -66,9 +66,11 @@ function Landing() {
 		if (email.length > 0 && isEmail(email)) {
 			setShowNewsletterModal(true);
 			sendFetchRequest(
-				"https://bevl.app/api/email?bevlAnnouncements=true",
+				"/api/newsletter/subscribe?optInStage=1&bevlAnnouncements=true",
 				"POST",
-				{ email: email }
+				{
+					email,
+				}
 			);
 			e.target.email.value = null;
 		}

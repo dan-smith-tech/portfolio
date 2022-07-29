@@ -4,8 +4,15 @@
 	display: flex;
 	justify-content: center;
 	align-items: center;
-	background-color: var(--color-secondary-translucent);
 	z-index: 1001 !important;
+}
+
+.container::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--color-secondary);
+	opacity: 0.85;
 }
 
 .element {
