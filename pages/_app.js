@@ -9,11 +9,24 @@ function DanSmithPortfolio({ Component, pageProps }) {
 		<>
 			<Head>
 				<link rel="icon" href="/images/favicon.svg" />
-				<link
-					href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@300;400;600;700&display=swap"
-					rel="stylesheet"
-				/>
 				<title>Dan Smith • Full-Stack Web Developer Portfolio</title>
+				<meta
+					property="og:title"
+					content="Dan Smith • Full-Stack Web Developer Portfolio"
+				/>
+				<meta
+					name="description"
+					content="I create minimalist, modern, and enjoyable experiences. I believe the best UX exists where the least UI does, so the UI that does exist must be outstanding."
+				/>
+				<meta
+					property="og:description"
+					content="I create minimalist, modern, and enjoyable experiences. I believe the best UX exists where the least UI does, so the UI that does exist must be outstanding."
+				/>
+				<meta name="keywords" content="portfolio, developer, full-stack" />
+				<meta
+					property="og:image"
+					content="https://www.dansmith.tech/images/open-graph/index.png"
+				/>
 			</Head>
 			<Component {...pageProps} />
 			<Footer />
