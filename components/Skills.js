@@ -7,19 +7,22 @@ export default function Skills({ collapsible }) {
 	const containerMain = useRef();
 
 	const skills = [
-		{ name: "HTML / CSS" },
-		{ name: "JavaScript" },
 		{ name: "Python" },
+		{ name: "NumPy" },
+		{ name: "JavaScript" },
 		{ name: "Node.js" },
-		{ name: "Next.js" },
-		{ name: "React" },
 		{ name: "Express.js" },
 		{ name: "MongoDB" },
-		{ name: "Mongoose" },
-		{ name: "Figma" },
-		{ name: "Affinity Designer" },
+		{ name: "Postman" },
+		{ name: "HTML / CSS" },
+		{ name: "React" },
+		{ name: "Next.js" },
+		{ name: "Electron" },
 		{ name: "Unity" },
 		{ name: "C#" },
+		{ name: "Git" },
+		{ name: "Figma" },
+		{ name: "Affinity Designer" },
 	];
 
 	function nextSkill() {
