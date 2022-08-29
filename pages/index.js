@@ -155,7 +155,7 @@ function Landing() {
 			>
 				<Project
 					heading="Bevl"
-					summary="Built with Node.js, Express.js, and MongoDB, Bevl is a simple, personal planner app. I built Bevl to facilitate my planning philosophy; assigning ambiguous chunks of time to tasks, as making hyper-specific plans are not realistic."
+					summary="Built with Next.js, Node, Express, and MongoDB, Bevl is a modern todo list for productive visual plans. I created Bevl to facilitate my planning philosophy; assigning ambiguous chunks of time to todos, as making hyper-specific plans cause us to overlook the unpredictable nature of our goals."
 					link="https://bevl.app"
 					images={[
 						"bevl/website.png",
@@ -167,7 +167,7 @@ function Landing() {
 				/>
 				<Project
 					heading="Shelf"
-					summary="Built in vanilla HTML, Shelf is a fully customisable, open-source browser startscreen that I made to display the relative importance/priority of bookmarks, by their size."
+					summary="Written in vanilla HTML, Shelf is a fully customisable, open-source browser startscreen. I made Shelf to exhibit the relative importance/priority of bookmarks, by their size."
 					link="https://github.com/dan-smith-tech/shelf"
 					images={[
 						"shelf/loading.png",
