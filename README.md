@@ -2,7 +2,7 @@
   <img alt="Logo" src="/public/images/favicon.svg" width="100"/>
 </div>
 <h1 align="center">DanSmith.tech</h1>
-<p align="center">My portfolio website.</p>
+<p align="center">My portfolio website, built with Next.js and hosted with <a href="https://vercel.com">Vercel</a>.</p>
 <br>
 <br>
 <br>
