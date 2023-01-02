@@ -9,7 +9,7 @@ export default function Footer() {
 						"container-partial " + footerStyles["container-partial"]
 					}
 				>
-					<p>Content Copyright © Dan Smith 2022</p>
+					<p>Content Copyright © Dan Smith 2023</p>
 					<p>
 						This website is open-source:{" "}
 						<a
