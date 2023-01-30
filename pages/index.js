@@ -107,8 +107,7 @@ function Landing() {
 				>
 					<div className={"container-content"}>
 						<h1 className={landingStyles["header"]}>
-							<span>Hi, </span>
-							<span>I'm Dan.</span>
+							Hi<span>,</span> I'm Dan<span>.</span>
 						</h1>
 						<h3 className={landingStyles["roles"]}>
 							<span>I'm a... </span>

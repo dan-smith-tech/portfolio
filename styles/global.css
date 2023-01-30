@@ -91,6 +91,7 @@ body,
 	--color-neutral-grey: #e5e5e5;
 
 	--border-size: 0.2rem;
+	--border-radius: 0.85rem;
 
 	--animation-duration: 500ms;
 }
@@ -98,7 +99,7 @@ body,
 * {
 	margin: 0;
 	padding: 0;
-	font-family: "Work Sans", sans-serif;
+	font-family: "Assistant", sans-serif;
 	color: var(--color-neutral-white);
 }
 
@@ -130,26 +131,26 @@ h5 {
 }
 
 h1 {
-	font-size: 3.5rem;
-	font-weight: 700;
+	font-size: 5rem;
+	font-weight: 900;
 	line-height: 3.5rem;
 }
 
 h2 {
-	font-size: 2.5rem;
-	font-weight: 600;
+	font-size: 2.85rem;
+	font-weight: 700;
 	line-height: 3.35rem;
 }
 
 h3 {
-	font-size: 1.35rem;
-	font-weight: 600;
+	font-size: 1.65rem;
+	font-weight: 700;
 	line-height: 1.35rem;
 }
 
 h4 {
 	font-size: 1.15rem;
-	font-weight: 600;
+	font-weight: 700;
 	line-height: 1.15rem;
 }
 
@@ -167,7 +168,7 @@ p {
 p,
 li {
 	margin-bottom: 1.5em;
-	font-size: 1.05rem;
+	font-size: 1.15rem;
 	font-weight: 500;
 	line-height: 2.2rem;
 }
@@ -228,7 +229,7 @@ small {
 label {
 	width: fit-content;
 	margin-bottom: 0.5em;
-	padding-left: 2.5em;
+	padding-left: 0.65em;
 	display: flex;
 	font-size: 1rem;
 	font-weight: 600;

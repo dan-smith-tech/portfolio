@@ -27,6 +27,16 @@ function DanSmithPortfolio({ Component, pageProps }) {
 					property="og:image"
 					content="https://www.dansmith.tech/images/open-graph/index.png"
 				/>
+				<link rel="preconnect" href="https://fonts.googleapis.com" />
+				<link
+					rel="preconnect"
+					href="https://fonts.gstatic.com"
+					crossorigin
+				/>
+				<link
+					href="https://fonts.googleapis.com/css2?family=Assistant:wght@600;700;800&display=swap"
+					rel="stylesheet"
+				/>
 			</Head>
 			<Component {...pageProps} />
 			<Footer />

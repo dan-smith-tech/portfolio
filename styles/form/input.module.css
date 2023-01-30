@@ -6,7 +6,7 @@
 	background-color: var(--color-neutral-white);
 	color: var(--color-secondary);
 	border: none;
-	border-radius: 3.5em;
+	border-radius: var(--border-radius);
 	font-size: 1rem;
 	line-height: 1.65rem;
 	transition-property: background-color;
@@ -24,6 +24,6 @@
 
 .element-textarea {
 	height: 8.5em;
-	border-radius: 2.5em;
+	border-radius: var(--border-radius);
 	resize: none;
 }
