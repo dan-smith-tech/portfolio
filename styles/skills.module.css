@@ -47,6 +47,7 @@
 
 .content-element-select {
 	font-size: 1.5rem;
+	font-weight: 700;
 	color: var(--color-primary);
 }
 
@@ -56,7 +57,18 @@
 
 .links {
 	padding-left: 1.5em;
-	border-left: var(--border-size) solid var(--color-neutral-white);
+	position: relative;
+}
+
+.links::before {
+	content: "";
+	width: var(--border-size);
+	height: 100%;
+	position: absolute;
+	left: 0;
+	border-radius: var(--border-radius);
+	background: var(--color-neutral-white);
+	background: var(--gradient-linear-neutral-white);
 }
 
 .links-element {

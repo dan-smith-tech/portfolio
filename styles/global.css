@@ -90,6 +90,15 @@ body,
 	--color-neutral-white: #ffffff;
 	--color-neutral-grey: #e5e5e5;
 
+	--gradient-linear-neutral-white: linear-gradient(
+		45deg,
+		rgba(255, 255, 255, 0) 0%,
+		rgba(255, 255, 255, 1) 35%,
+		rgba(255, 255, 255, 1) 50%,
+		rgba(255, 255, 255, 1) 65%,
+		rgba(255, 255, 255, 0) 100%
+	);
+
 	--border-size: 0.2rem;
 	--border-radius: 0.85rem;
 
