@@ -197,14 +197,19 @@
 }
 
 .container-info a {
-	width: fit-content;
-	display: flex;
-	align-items: center;
-	text-decoration: none;
+	display: block;
+	padding: 0.65em 1.15em;
+	transition-property: transform;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+}
+
+.container-info a:hover {
+	transform: scale(1.1);
 }
 
 .container-info a svg {
-	margin-left: 0.65em;
+	margin-left: 0.35em;
 }
 
 @media (max-width: 1200px) {

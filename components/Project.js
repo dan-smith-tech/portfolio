@@ -152,19 +152,6 @@ export default function Project({
 			<p>{summary}</p>
 			<a href={link} target={"_blank"}>
 				View Project{" "}
-				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24">
-					{/* <path fill="#0295f3" fillOpacity="1" d="m19 12-7-6v5H6v2h6v5z"></path> */}
-					<path
-						fill="#0295f3"
-						fillOpacity="1"
-						d="M20 3H4c-1.103 0-2 .897-2 2v14c0 1.103.897 2 2 2h5v-2H4V7h16v12h-5v2h5c1.103 0 2-.897 2-2V5c0-1.103-.897-2-2-2z"
-					></path>
-					<path
-						fill="#0295f3"
-						fillOpacity="1"
-						d="M13 21v-5h3l-4-5-4 5h3v5z"
-					></path>
-				</svg>
 			</a>
 		</div>
 	);

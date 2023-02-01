@@ -78,9 +78,21 @@
 html,
 body,
 #__next {
-	height: 100%;
+	height: fit-content;
 	background-color: var(--color-secondary);
 	scroll-behavior: smooth;
+
+	/* 	background: radial-gradient(black 15%, transparent 16%) 0 0,
+		radial-gradient(black 15%, transparent 16%) 8px 8px,
+		radial-gradient(var(--color-secondary) 15%, transparent 20%) 0 1px,
+		radial-gradient(var(--color-secondary) 15%, transparent 20%) 8px 9px;
+	background-color: var(--color-secondary);
+	background-size: 16px 16px; */
+
+	/* background-color: var(--color-secondary); */
+	/* background-image: url("../public/images/texture.jpg"); */
+	background-attachment: fixed;
+	/* background-blend-mode: hard-light; */
 }
 
 :root {
@@ -191,6 +203,29 @@ li:last-child {
 a {
 	color: var(--color-primary);
 	font-weight: 600;
+
+	padding: 0.35em 0.65em;
+	width: fit-content;
+	text-decoration: none;
+	font-weight: 700;
+	position: relative;
+}
+
+a::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--color-primary);
+	opacity: 0.15;
+	border-radius: var(--border-radius);
+	transition-property: transform, opacity;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+}
+
+a:hover::before {
+	opacity: 0.35;
+	transform: scale(1.1);
 }
 
 a:focus {

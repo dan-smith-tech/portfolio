@@ -1,5 +1,5 @@
 .container-main {
-	height: 200%;
+	height: 200vh;
 	position: absolute;
 	top: 0;
 	right: calc((100% - (70rem)) / 2);
@@ -76,13 +76,28 @@
 	height: 2.5em;
 	border-radius: 50%;
 	border: var(--border-size) solid var(--color-neutral-white);
+	position: relative;
 	transition-property: transform, opacity;
 	transition-duration: 100ms;
 	transition-timing-function: ease-out;
 }
 
+.links-element::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background-color: var(--color-neutral-white);
+	opacity: 0;
+	border-radius: 1rem;
+	z-index: -1;
+}
+
 .links-element:hover {
 	transform: scale(1.25);
+}
+
+.links-element:hover::before {
+	opacity: 0.15;
 }
 
 .links-element a:focus {
@@ -104,6 +119,16 @@
 	display: flex;
 	align-items: center;
 	justify-content: center;
+}
+
+.links-element svg {
+	transition-property: transform;
+	transition-duration: 100ms;
+	transition-timing-function: ease-out;
+}
+
+.links-element:hover svg {
+	transform: scale(1.15);
 }
 
 @media (max-width: 1200px) {

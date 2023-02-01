@@ -3,19 +3,23 @@
 	height: 4.25rem;
 	padding: 1.5em;
 	box-sizing: border-box;
-	background-color: var(--color-neutral-white);
-	color: var(--color-secondary);
-	border: none;
+	background-color: transparent;
+	border: var(--border-size) solid var(--color-neutral-white);
+	color: var(--color-neutral-white);
 	border-radius: var(--border-radius);
 	font-size: 1rem;
 	line-height: 1.65rem;
-	transition-property: background-color;
+	transition-property: transform;
 	transition-duration: 100ms;
 	transition-timing-function: ease-out;
 }
 
+.element:not(:placeholder-shown) {
+	background-color: #ffffff26;
+}
+
 .element:hover {
-	background-color: var(--color-neutral-grey);
+	transform: scale(1.05);
 }
 
 .element:focus {

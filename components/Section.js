@@ -36,7 +36,7 @@ export default function Button({ subheading, heading, children }) {
 	}, []);
 
 	return (
-		<div
+		<section
 			className={"container-full " + sectionStyles["container-full"]}
 			id={subheading.toString().toLowerCase()}
 			tabIndex={-1}
@@ -53,6 +53,6 @@ export default function Button({ subheading, heading, children }) {
 				</div>
 				{children}
 			</div>
-		</div>
+		</section>
 	);
 }

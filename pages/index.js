@@ -276,6 +276,7 @@ function Landing() {
 					/>
 				</div>
 			</Section>
+			<div id={"background"}></div>
 		</>
 	);
 }
