@@ -201,11 +201,10 @@ li:last-child {
 }
 
 a {
+	width: fit-content;
+	padding: 0.35em 0.65em;
 	color: var(--color-primary);
 	font-weight: 600;
-
-	padding: 0.35em 0.65em;
-	width: fit-content;
 	text-decoration: none;
 	font-weight: 700;
 	position: relative;
@@ -218,7 +217,7 @@ a::before {
 	background-color: var(--color-primary);
 	opacity: 0.15;
 	border-radius: var(--border-radius);
-	transition-property: transform, opacity;
+	transition-property: transform, opacity, border-radius;
 	transition-duration: 100ms;
 	transition-timing-function: ease-out;
 }
