@@ -35,7 +35,7 @@
 
 .award {
 	z-index: 1;
-	transition-property: transform, opacity;
+	transition-property: transform, opacity, filter;
 	transition-duration: 350ms;
 	transition-timing-function: ease-out;
 }
