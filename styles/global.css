@@ -229,8 +229,8 @@ a:hover::before {
 
 a:focus {
 	outline: var(--border-size) solid var(--color-primary);
-	outline-offset: 0.25em;
-	border-radius: 0.35em;
+	outline-offset: var(--border-size);
+	border-radius: var(--border-radius);
 }
 
 a:active {

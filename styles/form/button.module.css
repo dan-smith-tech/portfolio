@@ -30,6 +30,10 @@
 	transform: scale(1.1);
 }
 
+.element:focus {
+	outline-offset: var(--border-size);
+}
+
 .element:active {
 	transition: none;
 	transform: scale(0.95);

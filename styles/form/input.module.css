@@ -24,6 +24,7 @@
 
 .element:focus {
 	outline: var(--border-size) solid var(--color-primary);
+	outline-offset: var(--border-size);
 }
 
 .element-textarea {

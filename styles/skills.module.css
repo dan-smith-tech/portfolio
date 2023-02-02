@@ -102,7 +102,7 @@
 
 .links-element a:focus {
 	border-radius: 50%;
-	outline-offset: var(--border-size);
+	outline-offset: calc(var(--border-size) * 2);
 }
 
 .links-element:active {
