@@ -1,0 +1,34 @@
+.container-full-content {
+}
+
+.container-full-content h1 {
+	font-size: 3.5rem;
+	line-height: 3.5rem;
+}
+
+.title {
+	height: fit-content;
+	margin-top: 4rem;
+	font-size: 2.35rem !important;
+}
+
+.title-light {
+	font-weight: 400;
+}
+
+.title-period {
+	color: var(--color-primary);
+}
+
+.summary {
+	width: 35em;
+	margin-top: 1.65em;
+}
+
+.container-posts {
+	width: 100%;
+	margin-top: 6.5rem;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3.5em;
+}
