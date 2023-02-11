@@ -2,7 +2,7 @@ import footerStyles from "../styles/footer.module.css";
 
 export default function Footer() {
 	return (
-		<footer>
+		<footer id={"footer"}>
 			<div className={"container-full " + footerStyles["container-full"]}>
 				<div
 					className={

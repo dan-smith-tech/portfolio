@@ -1,5 +1,4 @@
 .container-main {
-	height: 200vh;
 	position: absolute;
 	top: 0;
 	right: calc((100% - (70rem)) / 2);

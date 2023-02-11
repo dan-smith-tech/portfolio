@@ -1,4 +1,4 @@
-import { useRef, useEffect, useState } from "react";
+import { useRef, useState } from "react";
 import Link from "next/link";
 import Script from "next/script";
 
@@ -20,46 +20,6 @@ function Landing() {
 	const [showNewsletterModal, setShowNewsletterModal] = useState(false);
 	const splashSection = useRef();
 
-	var aboutSection = null;
-	var skillsElementContainerFirst = null;
-	var skillsElementFirst = null;
-	var workSection = null;
-	var contactSection = null;
-	var newsletterSection = null;
-	var skillsElementContainerSecond = null;
-	var skillsElementSecond = null;
-	var skillsElementHeight = null;
-
-	// Calculate the 'top' value for the skills carousel positioned sticky (the container is sticky) on the right of the screen:
-	function calculateSkillsElementPosition() {
-		// Get the height of the two sections the sticky carousel container needs to vertically fill (splash & 'about'):
-		var totalHeightSectionFirst =
-			splashSection.current.clientHeight + aboutSection.clientHeight;
-		// Center the skills carousel vertically on the screen, for the sections defined above:
-		var topFirst = (window.innerHeight - skillsElementHeight) / 2;
-		skillsElementFirst.style.top = topFirst + "px";
-		// Add buffer to the bottom of the container to keep the element centered in the screen when the sticky positioning disengages:
-		skillsElementContainerFirst.style.height =
-			totalHeightSectionFirst - topFirst + "px";
-
-		// Get the height of the two sections the sticky carousel container needs to vertically fill ('contact' & 'newsletter'):
-		var totalHeightSectionSecond =
-			contactSection.clientHeight + newsletterSection.clientHeight;
-		// Center the skills carousel vertically on the screen, for the sections defined above:
-		var topSecond = (window.innerHeight - skillsElementHeight) / 2;
-		skillsElementSecond.style.top = topSecond + "px";
-		// Position the container at the bottom of the page to align with the sections defined above:
-		var topContainerSecond =
-			splashSection.current.clientHeight +
-			aboutSection.clientHeight +
-			workSection.clientHeight;
-		skillsElementContainerSecond.style.top =
-			topContainerSecond + topSecond + "px";
-		// Add buffer to the top and bottom of the container to keep the element centered in the screen when the sticky positioning disengages:
-		skillsElementContainerSecond.style.height =
-			totalHeightSectionSecond - topSecond * 2 + "px";
-	}
-
 	function handleNewsletterSignup(e) {
 		e.preventDefault();
 		const email = e.target.email.value;
@@ -76,27 +36,10 @@ function Landing() {
 		}
 	}
 
-	useEffect(() => {
-		// Hard-coded section refs to avoid forwardRef issues:
-		aboutSection = splashSection.current.nextSibling.nextSibling;
-		skillsElementContainerFirst = aboutSection.previousSibling;
-		skillsElementFirst = skillsElementContainerFirst.children[0];
-		workSection = aboutSection.nextSibling;
-		contactSection = aboutSection.nextSibling.nextSibling;
-		newsletterSection = contactSection.nextSibling.nextSibling;
-		skillsElementContainerSecond = contactSection.nextSibling;
-		skillsElementSecond = contactSection.nextSibling.children[0];
-		skillsElementHeight = skillsElementFirst.clientHeight;
-
-		calculateSkillsElementPosition();
-		window.addEventListener("resize", calculateSkillsElementPosition);
-		return () =>
-			window.removeEventListener("resize", calculateSkillsElementPosition);
-	}, []);
-
 	return (
 		<>
 			<section
+				id={"splash"}
 				className={"container-full " + landingStyles["container-full"]}
 				ref={splashSection}
 			>
@@ -128,7 +71,6 @@ function Landing() {
 					</div>
 				</div>
 			</section>
-			<Skills collapsible={true} />
 			<Section
 				subheading={"ABOUT"}
 				heading={"UX is my passion, programming is my hobby."}
@@ -235,7 +177,6 @@ function Landing() {
 					</form>
 				</div>
 			</Section>
-			<Skills collapsible={false} />
 			<Section
 				subheading={"NEWSLETTER"}
 				heading={"Stay up to date with my latest projects."}
@@ -276,7 +217,18 @@ function Landing() {
 					/>
 				</div>
 			</Section>
-			<div id={"background"}></div>
+			<Skills
+				topElementId={"splash"}
+				bottomElementId={"work"}
+				readHeightFromTopOfTop={true}
+				collapsible={true}
+			/>
+			<Skills
+				topElementId={"work"}
+				bottomElementId={"footer"}
+				readHeightFromTopOfTop={false}
+				collapsible={false}
+			/>
 		</>
 	);
 }
