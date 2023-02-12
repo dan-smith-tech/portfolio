@@ -11,3 +11,18 @@ tags:
 ## kewl title
 
 Really cool and long paragraph.
+
+## annuda fing
+
+```js
+const posts = files.map((fileName) => {
+	const slug = fileName.replace(".md", "");
+	const readFile = fs.readFileSync("./blog/" + fileName, "utf-8");
+	const { data: frontmatter } = matter(readFile);
+
+	return {
+		slug,
+		frontmatter,
+	};
+});
+```

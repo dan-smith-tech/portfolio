@@ -40,8 +40,7 @@ export default function Blog({ posts }) {
 				className={"container-full " + blogStyles["container-full-content"]}
 			>
 				<div className={"container-partial"}>
-					change title class name / layout
-					<div className={blogStyles["title"]}>
+					<div className={blogStyles["heading"]}>
 						<h1>
 							<span className={blogStyles["title-light"]}>
 								Dan Smith

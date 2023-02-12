@@ -28,7 +28,7 @@ export default function Post({ imageLink, tags, title, summary, postLink }) {
 					<p className={postStyles["summary"]}>{summary}</p>
 				</div>
 				<div className={postStyles["container-button"]}>
-					<Link href={"/blog/"} draggable="false">
+					<Link href={"/blog/" + postLink} draggable="false">
 						<a>Read Post </a>
 					</Link>
 				</div>
