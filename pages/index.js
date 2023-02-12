@@ -8,6 +8,7 @@ import Section from "../components/Section";
 import Occupations from "../components/Occupations";
 import Skills from "../components/Skills";
 import Awards from "../components/Awards";
+import Experience from "../components/Experience";
 import Project from "../components/Project";
 import Modal from "../components/Modal";
 
@@ -88,6 +89,41 @@ function Landing() {
 						wherever I can.
 					</p>
 					<Awards />
+				</div>
+			</Section>
+			<Section
+				subheading={"EXPERIENCE"}
+				heading={"The best adventures are the ones you learn from"}
+			>
+				<div className={"container-content"}>
+					<Experience
+						title={"3-Day Startup"}
+						date={"October 2022"}
+						summary={
+							"This programme required me to work with 3  random people to create a business plan and pitch deck (which we presented in front of investors) over the course of 1 weekend. Throughout this process I developed my communication, planning, and creativity (entrepreneurial) skills."
+						}
+					/>
+					<Experience
+						title={"Neural Network and Deep Learning Research"}
+						date={"December 2021"}
+						summary={
+							"For my IB Extended Essay I researched the relationship between neuron density / number of  hidden layers and efficiency / accuracy of a neural network. As per the requirements of the Extended Essay, I presented this informaton in a dissertation-style essay."
+						}
+					/>
+					<Experience
+						title={"Front-End Web Developer for the IB"}
+						date={"June 2020 - August 2020"}
+						summary={
+							"I worked on the interface (as well as provided some content) for a digital resource library being created by the IB. For this, I had to communicate with a team of developers and designers and pitch my ideas for navigation and responsive card layouts through designs and prototypes."
+						}
+					/>
+					<Experience
+						title={"Hive Learning Tester"}
+						date={"March 2020 - May 2020"}
+						summary={
+							"I communicated with the development team on how their interface and UX design (as well as some of the content) could better target their users (students)."
+						}
+					/>
 				</div>
 			</Section>
 			<Section

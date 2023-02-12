@@ -1,3 +1,21 @@
+/* assistant-500 - latin */
+@font-face {
+	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+	font-family: "Assistant";
+	font-style: normal;
+	font-weight: 500;
+	src: url("/fonts/assistant-v18-latin-500.eot"); /* IE9 Compat Modes */
+	src: url("/fonts/assistant-v18-latin-500.eot?#iefix")
+			format("embedded-opentype"),
+		/* IE6-IE8 */ url("/fonts/assistant-v18-latin-500.woff2") format("woff2"),
+		/* Super Modern Browsers */ url("/fonts/assistant-v18-latin-500.woff")
+			format("woff"),
+		/* Modern Browsers */ url("/fonts/assistant-v18-latin-500.ttf")
+			format("truetype"),
+		/* Safari, Android, iOS */
+			url("/fonts/assistant-v18-latin-500.svg#Assistant") format("svg"); /* Legacy iOS */
+}
+
 /* assistant-600 - latin */
 @font-face {
 	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
@@ -151,15 +169,15 @@ h5 {
 }
 
 p {
-	text-align: justify;
+	/* text-align: justify; */
 }
 
 p,
 li {
 	margin-bottom: 1.5em;
 	font-size: 1.15rem;
-	font-weight: 500;
-	line-height: 2.2rem;
+	font-weight: 00;
+	line-height: 2.15rem;
 }
 
 section:focus {
