@@ -49,6 +49,18 @@
 	font-weight: 700;
 }
 
+.header {
+}
+
+.header-list {
+	margin-top: 2.35em;
+	list-style: none;
+}
+
+.header-list li {
+	margin: 0;
+}
+
 .container-summary {
 	flex-grow: 1;
 }
@@ -74,4 +86,22 @@
 
 .container-button a:hover {
 	transform: scale(1.1);
+}
+
+.content {
+}
+
+.content h2 {
+	margin: 1.85em 0 1.5rem 0;
+}
+
+.content ul,
+.content ol {
+	margin-bottom: 1.5rem;
+	padding-left: 1.15em;
+}
+
+.content ul li,
+.content ol li {
+	margin-bottom: 0.15em;
 }

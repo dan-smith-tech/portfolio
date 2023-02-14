@@ -1,5 +1,6 @@
 import fs from "fs";
 import matter from "gray-matter";
+import Link from "next/link";
 import ReactMarkdown from "react-markdown";
 
 import postStyles from "../../styles/blog/post.module.css";
@@ -36,8 +37,43 @@ export default function Post({ frontmatter, content }) {
 	return (
 		<div className={"container-full " + postStyles["container-full"]}>
 			<div className={"container-partial"}>
-				<h1 className={"title"}>{frontmatter.title}</h1>
-				<ReactMarkdown children={content} />
+				<div className={postStyles["header"]}>
+					<h1 className={"title"}>{frontmatter.title}</h1>
+					<ul className={postStyles["header-list"]}>
+						<li>
+							<strong>Written by</strong>:{" "}
+							<Link href={"/"}>
+								<a>Dan Smith</a>
+							</Link>
+						</li>
+						<li>
+							<strong>Published</strong>:{" "}
+							{new Date(frontmatter.published).toLocaleDateString(
+								"en-UK",
+								{
+									year: "numeric",
+									month: "long",
+									day: "numeric",
+								}
+							)}
+						</li>
+						<li>
+							<strong>Updated</strong>:{" "}
+							{new Date(frontmatter.updated).toLocaleDateString(
+								"en-UK",
+								{
+									year: "numeric",
+									month: "long",
+									day: "numeric",
+								}
+							)}
+						</li>
+					</ul>
+				</div>
+				<ReactMarkdown
+					className={postStyles["content"]}
+					children={content}
+				/>
 			</div>
 		</div>
 	);
