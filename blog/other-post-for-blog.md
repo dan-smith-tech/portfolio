@@ -1,5 +1,5 @@
 ---
-title: Test post
+title: Kewl kewl things and stuff like you know
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 thumbnail: laptop.png
 published: "2022-11-12"

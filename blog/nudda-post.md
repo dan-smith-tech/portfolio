@@ -1,25 +1,14 @@
 ---
-title: Test post
+title: Designing and developing interfaces for small screens
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 thumbnail: plane.png
-published: "2022-11-12"
-updated: "2022-11-12"
+published: "2022-02-13"
+updated: "2022-02-13"
 tags:
    - Machine Learning
 ---
 
-## Processes
-
--  We now look at the programs we want to run
--  The word process is used to describe:
-   -  the executable code and its data and
-   -  the associated information the OS needs to run it
-
-_Note this is different from processor and program._
-
-_Note: a process is also known as a task or job: a process that is running that the OS is controlling._
-
-An OS needs to keep a lots of information about a process, including:
+We now look at the programs we want to run The word process is used to describe: the executable code and its data and the associated information the OS needs to run it. _Note this is different from processor and program._ _Note: a process is also known as a task or job: a process that is running that the OS is controlling._ An OS needs to keep a lots of information about a process, including:
 
 -  Where in memory its code is
 -  Where in memory its data is
@@ -63,8 +52,6 @@ A process will be moved by the OS between the 5 states:
 -  A process just finished will be in the state **Exit**
 -  In between the OS must decide, as part of its scheduling, where to place each process
 -  There is a standard finite state machine that describes the allowed transitions between states
-
-![Diagram of processes](./media/lecture-2-processes-diagram.jpg)
 
 Algorithms that distribute and decide between running, ready, blocked are complex and make each process feel that they have exclusive access to the CPU (when in reality they are sharing it with other processes). THe more processes there are, the more memory there is to store operations, and the more CPU time it takes to run and transition between them all. Fewer windows open on your machine mean less process in the schedule list and therefore fewer processes to schedule.
 
