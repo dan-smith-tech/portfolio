@@ -3,6 +3,8 @@ import matter from "gray-matter";
 import Link from "next/link";
 import Image from "next/image";
 import ReactMarkdown from "react-markdown";
+import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
+import { atomDark } from "react-syntax-highlighter/dist/cjs/styles/prism";
 
 import postStyles from "../../styles/blog/post.module.css";
 
@@ -36,8 +38,10 @@ export async function getStaticProps({ params: { id } }) {
 
 export default function Post({ frontmatter, content }) {
 	return (
-		<div className={"container-full " + postStyles["container-full"]}>
-			<div className={"container-partial"}>
+		<div className={"container-full"}>
+			<div
+				className={"container-partial " + postStyles["container-partial"]}
+			>
 				<div className={postStyles["header"]}>
 					<div className={postStyles["header-info"]}>
 						<h1>{frontmatter.title}</h1>
@@ -90,6 +94,25 @@ export default function Post({ frontmatter, content }) {
 				<ReactMarkdown
 					className={postStyles["content"]}
 					children={content}
+					// https://github.com/remarkjs/react-markdown#use-custom-components-syntax-highlight
+					components={{
+						code({ node, inline, className, children, ...props }) {
+							const match = /language-(\w+)/.exec(className || "");
+							return !inline && match ? (
+								<SyntaxHighlighter
+									children={String(children).replace(/\n$/, "")}
+									style={atomDark}
+									language={match[1]}
+									PreTag="div"
+									{...props}
+								/>
+							) : (
+								<code className={className} {...props}>
+									{children}
+								</code>
+							);
+						},
+					}}
 				/>
 			</div>
 		</div>

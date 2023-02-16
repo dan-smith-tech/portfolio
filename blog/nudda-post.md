@@ -70,6 +70,17 @@ _Note: it’s not the processes moving themselves between the states, it’s the
 
 We shall assume, for simplicity, that we have just one processor. The OS will have lists of processes in each state, so the scheduling decision is making the choice of which process to move between which states. Again, in real OSs, these will not be simple lists. They might be arranged in priority order, or might be some more sophisticated datastructure (e.g., a pair of lists, one for real-time processes and the other for non-real-time; or a tree).
 
+```c
+#include <stdio.h>
+
+int integer = 21;
+
+int main() {
+   printf("Hello, world.");
+   return 0;
+}
+```
+
 For example:
 
 -  Windows:
