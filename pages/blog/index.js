@@ -8,6 +8,7 @@ import Post from "../../components/blog/Post";
 import Button from "../../components/form/Button";
 
 import blogStyles from "../../styles/blog/index.module.css";
+import Footer from "../../components/Footer";
 
 export async function getStaticProps() {
 	const files = fs.readdirSync("blog");
@@ -36,9 +37,7 @@ export default function Blog({ posts }) {
 			<Head>
 				<title>Dan Smith • Blog</title>
 			</Head>
-			<div
-				className={"container-full " + blogStyles["container-full-content"]}
-			>
+			<div className={"container-full " + blogStyles["container-full"]}>
 				<div className={"container-partial"}>
 					<div className={blogStyles["heading"]}>
 						<h1>
@@ -77,6 +76,7 @@ export default function Blog({ posts }) {
 					</div>
 				</div>
 			</div>
+			<Footer />
 		</>
 	);
 }

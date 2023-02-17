@@ -1,9 +1,9 @@
 ---
-title: Designing and developing interfaces for small screens
+title: Developing interfaces for small screens
 description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
 thumbnail: plane.png
 published: "2022-02-13"
-updated: "2022-02-13"
+updated: "2022-02-17"
 tags:
    - Machine Learning
 ---

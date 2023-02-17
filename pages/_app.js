@@ -29,7 +29,6 @@ function DanSmithPortfolio({ Component, pageProps }) {
 				/>
 			</Head>
 			<Component {...pageProps} />
-			<Footer />
 		</>
 	);
 }

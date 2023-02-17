@@ -10,6 +10,7 @@ import Skills from "../components/Skills";
 import Awards from "../components/Awards";
 import Project from "../components/Project";
 import Modal from "../components/Modal";
+import Footer from "../components/Footer";
 
 import sendFetchRequest from "../lib/fetch";
 import { isEmail } from "../lib/helpers";
@@ -277,6 +278,7 @@ function Landing() {
 				</div>
 			</Section>
 			<div id={"background"}></div>
+			<Footer />
 		</>
 	);
 }

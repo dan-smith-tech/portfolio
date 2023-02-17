@@ -1,7 +1,7 @@
 import Link from "next/link";
 import Image from "next/image";
 
-import postStyles from "../../styles/blog/post.module.css";
+import postStyles from "../../styles/blog/card.module.css";
 
 export default function Post({ imageLink, tags, title, summary, postLink }) {
 	return (

@@ -7,8 +7,19 @@
 	justify-content: space-between;
 }
 
+.container-partial-small {
+	width: 52rem !important;
+	flex-direction: column;
+}
+
 .container-partial p {
 	margin: 0;
+	font-size: 1rem;
+	font-weight: 600;
+}
+
+.container-partial-small p:not(:first-child) {
+	margin-top: 0.35em;
 }
 
 @media (max-width: 850px) {

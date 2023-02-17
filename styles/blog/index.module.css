@@ -1,4 +1,4 @@
-.container-full-content {
+.container-full {
 }
 
 .container-full-content h1 {
@@ -27,7 +27,7 @@
 
 .container-posts {
 	width: 100%;
-	margin-top: 8.5rem;
+	margin: 8.5rem 0 6.5rem 0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 3.5em;
