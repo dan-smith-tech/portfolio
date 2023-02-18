@@ -27,8 +27,21 @@
 
 .container-posts {
 	width: 100%;
-	margin: 8.5rem 0 6.5rem 0;
+	margin: 8.5rem 0 4rem 0;
 	display: grid;
 	grid-template-columns: repeat(3, 1fr);
 	gap: 3.5em;
+}
+
+@media (max-width: 1200px) {
+	.container-posts {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 880px) {
+	.container-posts {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 5em;
+	}
 }

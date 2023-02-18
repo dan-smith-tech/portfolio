@@ -295,8 +295,8 @@ label {
 	}
 
 	h1 {
-		font-size: 2.65rem;
-		line-height: 2.65rem;
+		font-size: 2.65rem !important;
+		line-height: 2.65rem !important;
 	}
 
 	h2 {
@@ -322,7 +322,7 @@ label {
 	p,
 	li {
 		font-size: 1rem;
-		line-height: 2.1rem;
+		line-height: 2rem;
 	}
 
 	.form-row {

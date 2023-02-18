@@ -1,16 +1,12 @@
 .container-partial {
 	width: 52rem;
-	/* padding: 2.5rem 12.5rem !important; */
 }
 
 .header {
 	margin-top: 3.5rem;
-	/* display: grid;
-	grid-template-columns: 2fr 1.35fr; */
 }
 
 .header-info {
-	/* margin-bottom: 6.5rem; */
 }
 
 .header h1 {
@@ -64,13 +60,17 @@
 
 .content p {
 	margin-bottom: 1.5rem;
-	line-height: 2.15rem;
 }
 
 .content ul,
 .content ol {
 	margin-bottom: 1.5rem;
 	padding-left: 1.15em;
+}
+
+.content ul li,
+.content ol li {
+	margin-bottom: 0.15em;
 }
 
 .content ul ul,
@@ -80,11 +80,33 @@
 	margin-bottom: 0;
 }
 
-.content ul li,
-.content ol li {
-	margin-bottom: 0.15em;
-}
-
 .content pre {
 	margin: 1.85rem 0 1.85rem 0;
+}
+
+@media (max-width: 650px) {
+	.header {
+		margin-top: 0;
+	}
+
+	.header-list {
+		display: block;
+	}
+
+	.header-list span {
+		display: none;
+	}
+
+	.content h2 {
+		margin-bottom: 0.85rem;
+	}
+
+	.content p {
+		margin-bottom: 0.85rem;
+	}
+
+	.content ul,
+	.content ol {
+		margin-bottom: 0.85rem;
+	}
 }
