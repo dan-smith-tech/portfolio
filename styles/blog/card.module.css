@@ -82,8 +82,10 @@
 	transition-timing-function: ease-out;
 }
 
-.container-button a:hover {
-	transform: scale(1.1);
+@media (prefers-reduced-motion: no-preference) {
+	.container-button a:hover {
+		transform: scale(1.1);
+	}
 }
 
 @media (max-width: 880px) {

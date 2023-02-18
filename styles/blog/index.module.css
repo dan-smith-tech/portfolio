@@ -21,7 +21,7 @@
 }
 
 .summary {
-	width: 35em;
+	max-width: 35em;
 	margin-top: 1.15em;
 }
 
