@@ -1,5 +1,6 @@
 .container-full {
 	background-color: var(--color-secondary);
+	z-index: 2;
 }
 
 .container-partial {
