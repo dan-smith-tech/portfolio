@@ -364,7 +364,7 @@ label {
 .container-blur {
 	position: fixed;
 	inset: 0;
-	backdrop-filter: blur(185px);
+	backdrop-filter: blur(350px);
 	z-index: 1;
 }
 
@@ -389,7 +389,7 @@ label {
 		var(--color-neutral-white) 35%,
 		var(--color-primary) 100%
 	);
-	opacity: 0.15;
+	opacity: 0.3;
 	animation-name: mouseEffect;
 	animation-duration: 15s;
 	animation-iteration-count: infinite;
