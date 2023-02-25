@@ -107,7 +107,7 @@ function Landing() {
 						title={"Neural Network and Deep Learning Research"}
 						date={"December 2021"}
 						summary={
-							"For my IB Extended Essay I researched the relationship between neuron density / number of  hidden layers and efficiency / accuracy of a neural network. As per the requirements of the Extended Essay, I presented this informaton in a dissertation-style essay."
+							"For my IB Extended Essay I researched the relationship between neuron density / number of  hidden layers and efficiency / accuracy of a neural network. As per the requirements of the Extended Essay, I presented this information in a dissertation-style essay."
 						}
 					/>
 					<Experience
