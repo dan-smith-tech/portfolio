@@ -45,7 +45,7 @@ function DanSmithPortfolio({ Component, pageProps }) {
 					content="https://www.dansmith.tech/images/open-graph/index.png"
 				/>
 			</Head>
-      
+
 			<div className="front">
 				<Component className={"front"} {...pageProps} />
 			</div>
@@ -53,8 +53,6 @@ function DanSmithPortfolio({ Component, pageProps }) {
 			<div className={"container-mouse-effect"}>
 				<div className={"mouse-effect"} ref={mouseEffect} />
 			</div>
-
-			<Footer />
 		</>
 	);
 }
