@@ -99,6 +99,11 @@
 	opacity: 0.15;
 }
 
+.links-element:active {
+	transition: none;
+	transform: scale(0.95);
+}
+
 .links-element a:focus {
 	border-radius: 50%;
 	outline-offset: calc(var(--border-size) * 2);

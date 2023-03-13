@@ -17,7 +17,7 @@ function DanSmithPortfolio({ Component, pageProps }) {
 					left: clientX + "px",
 					top: clientY + "px",
 				},
-				{ duration: 15000, fill: "forwards" }
+				{ duration: 18500, fill: "forwards" }
 			);
 		};
 	}, []);

@@ -144,7 +144,7 @@ h5 {
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 4.65rem;
 	font-weight: 900;
 	line-height: 3.5rem;
 }
@@ -231,6 +231,11 @@ a:focus {
 
 a:active {
 	opacity: 0.35;
+}
+
+a:active::before {
+	transform: scale(0.95);
+	transition: none;
 }
 
 small {
@@ -386,12 +391,12 @@ label {
 	background: var(--color-neutral-white);
 	background: linear-gradient(
 		90deg,
-		var(--color-neutral-white) 35%,
+		var(--color-neutral-white) 1%,
 		var(--color-primary) 100%
 	);
-	opacity: 0.15;
+	opacity: 0.25;
 	animation-name: mouseEffect;
-	animation-duration: 15s;
+	animation-duration: 8.5s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	z-index: 0;

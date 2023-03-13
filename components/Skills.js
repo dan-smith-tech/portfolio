@@ -15,10 +15,14 @@ export default function Skills({
 	const skills = [
 		{ name: "Python" },
 		{ name: "NumPy" },
+		{ name: "C / GCC" },
+		{ name: "Java" },
+		{ name: "Android Studio" },
 		{ name: "JavaScript" },
 		{ name: "Node.js" },
 		{ name: "Express.js" },
 		{ name: "MongoDB" },
+		{ name: "SQL" },
 		{ name: "Postman" },
 		{ name: "HTML / CSS" },
 		{ name: "React" },
@@ -26,9 +30,8 @@ export default function Skills({
 		{ name: "Electron" },
 		{ name: "Unity" },
 		{ name: "C#" },
-		{ name: "Git" },
+		{ name: "Git / GitHub" },
 		{ name: "Figma" },
-		{ name: "Affinity Designer" },
 	];
 
 	function nextSkill() {
