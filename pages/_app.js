@@ -45,7 +45,7 @@ function DanSmithPortfolio({ Component, pageProps }) {
 					content="https://www.dansmith.tech/images/open-graph/index.png"
 				/>
 			</Head>
-
+      
 			<div className="front">
 				<Component className={"front"} {...pageProps} />
 			</div>

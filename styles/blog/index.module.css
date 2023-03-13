@@ -1,0 +1,47 @@
+.container-full {
+}
+
+.container-full-content h1 {
+	font-size: 4.35rem;
+	line-height: 3.5rem;
+}
+
+.heading {
+	height: fit-content;
+	margin-top: 6rem;
+	font-size: 2.35rem !important;
+}
+
+.title-light {
+	font-weight: 400;
+}
+
+.title-period {
+	color: var(--color-primary);
+}
+
+.summary {
+	max-width: 35em;
+	margin-top: 1.15em;
+}
+
+.container-posts {
+	width: 100%;
+	margin: 8.5rem 0 4rem 0;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 3.5em;
+}
+
+@media (max-width: 1200px) {
+	.container-posts {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+@media (max-width: 880px) {
+	.container-posts {
+		grid-template-columns: repeat(1, 1fr);
+		gap: 5em;
+	}
+}

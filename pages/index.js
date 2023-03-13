@@ -11,6 +11,7 @@ import Awards from "../components/Awards";
 import Experience from "../components/Experience";
 import Project from "../components/Project";
 import Modal from "../components/Modal";
+import Footer from "../components/Footer";
 
 import sendFetchRequest from "../lib/fetch";
 import { isEmail } from "../lib/helpers";
@@ -292,6 +293,7 @@ function Landing() {
 				readHeightFromTopOfTop={false}
 				collapsible={false}
 			/>
+      <Footer />
 		</>
 	);
 }

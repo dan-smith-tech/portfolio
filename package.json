@@ -13,9 +13,13 @@
 	"license": "ISC",
 	"dependencies": {
 		"crypto-js": "^4.1.1",
+		"fs": "0.0.1-security",
+		"gray-matter": "^4.0.3",
 		"next": "^12.1.4",
 		"react": "^18.2.0",
 		"react-dom": "^18.0.0",
+		"react-markdown": "^8.0.5",
+		"react-syntax-highlighter": "^15.5.0",
 		"sharp": "^0.30.6",
 		"sib-api-v3-sdk": "^8.4.0"
 	}

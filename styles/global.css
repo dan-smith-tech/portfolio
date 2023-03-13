@@ -1,19 +1,20 @@
-/* assistant-500 - latin */
+/* assistant-regular - latin */
 @font-face {
 	font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
 	font-family: "Assistant";
 	font-style: normal;
-	font-weight: 500;
-	src: url("/fonts/assistant-v18-latin-500.eot"); /* IE9 Compat Modes */
-	src: url("/fonts/assistant-v18-latin-500.eot?#iefix")
+	font-weight: 400;
+	src: url("/fonts/assistant-v18-latin-regular.eot"); /* IE9 Compat Modes */
+	src: url("/fonts/assistant-v18-latin-regular.eot?#iefix")
 			format("embedded-opentype"),
-		/* IE6-IE8 */ url("/fonts/assistant-v18-latin-500.woff2") format("woff2"),
-		/* Super Modern Browsers */ url("/fonts/assistant-v18-latin-500.woff")
+		/* IE6-IE8 */ url("/fonts/assistant-v18-latin-regular.woff2")
+			format("woff2"),
+		/* Super Modern Browsers */ url("/fonts/assistant-v18-latin-regular.woff")
 			format("woff"),
-		/* Modern Browsers */ url("/fonts/assistant-v18-latin-500.ttf")
+		/* Modern Browsers */ url("/fonts/assistant-v18-latin-regular.ttf")
 			format("truetype"),
 		/* Safari, Android, iOS */
-			url("/fonts/assistant-v18-latin-500.svg#Assistant") format("svg"); /* Legacy iOS */
+			url("/fonts/assistant-v18-latin-regular.svg#Assistant") format("svg"); /* Legacy iOS */
 }
 
 /* assistant-600 - latin */
@@ -309,8 +310,8 @@ label {
 	}
 
 	h1 {
-		font-size: 2.65rem;
-		line-height: 2.65rem;
+		font-size: 3.15rem !important;
+		line-height: 3.15rem !important;
 	}
 
 	h2 {
@@ -336,7 +337,7 @@ label {
 	p,
 	li {
 		font-size: 1rem;
-		line-height: 2.1rem;
+		line-height: 2rem;
 	}
 
 	.form-row {
