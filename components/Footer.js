@@ -14,7 +14,7 @@ export default function Footer({ small }) {
 	};
 
 	return (
-		<footer>
+		<footer id={"footer"}>
 			<div className={"container-full " + footerStyles["container-full"]}>
 				<div className={getPartialContainerStyles()}>
 					<p>Content Copyright © Dan Smith 2023</p>

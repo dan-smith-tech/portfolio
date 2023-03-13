@@ -2,17 +2,27 @@ import { useRef, useEffect, useState } from "react";
 
 import skillsStyles from "../styles/skills.module.css";
 
-export default function Skills({ collapsible }) {
+export default function Skills({
+	topElementId,
+	bottomElementId,
+	readHeightFromTopOfTop,
+	collapsible,
+}) {
 	const [currentSkill, setCurrentSkill] = useState(0);
 	const containerMain = useRef();
+	const element = useRef();
 
 	const skills = [
 		{ name: "Python" },
 		{ name: "NumPy" },
+		{ name: "C / GCC" },
+		{ name: "Java" },
+		{ name: "Android Studio" },
 		{ name: "JavaScript" },
 		{ name: "Node.js" },
 		{ name: "Express.js" },
 		{ name: "MongoDB" },
+		{ name: "SQL" },
 		{ name: "Postman" },
 		{ name: "HTML / CSS" },
 		{ name: "React" },
@@ -20,9 +30,8 @@ export default function Skills({ collapsible }) {
 		{ name: "Electron" },
 		{ name: "Unity" },
 		{ name: "C#" },
-		{ name: "Git" },
+		{ name: "Git / GitHub" },
 		{ name: "Figma" },
-		{ name: "Affinity Designer" },
 	];
 
 	function nextSkill() {
@@ -64,10 +73,41 @@ export default function Skills({ collapsible }) {
 		);
 	};
 
+	function calculateElementPosition() {
+		const top =
+			window.pageYOffset +
+			(readHeightFromTopOfTop
+				? document.querySelector("#" + topElementId).getBoundingClientRect()
+						.top
+				: document.querySelector("#" + topElementId).getBoundingClientRect()
+						.bottom);
+		const bottom =
+			window.pageYOffset +
+			document.querySelector("#" + bottomElementId).getBoundingClientRect()
+				.top;
+
+		containerMain.current.style.top =
+			top + (window.innerHeight - element.current.clientHeight) / 2 + "px";
+		containerMain.current.style.height =
+			bottom -
+			top -
+			(window.innerHeight - element.current.clientHeight) +
+			"px";
+
+		element.current.style.top =
+			(window.innerHeight - element.current.clientHeight) / 2 + "px";
+	}
+
 	useEffect(() => {
+		calculateElementPosition();
+		window.addEventListener("resize", calculateElementPosition);
+
 		nextSkill(1);
 		const interval = setInterval(() => nextSkill(), 1500);
-		return () => clearInterval(interval);
+		return () => {
+			window.removeEventListener("resize", calculateElementPosition);
+			clearInterval(interval);
+		};
 	}, []);
 
 	return (
@@ -81,7 +121,11 @@ export default function Skills({ collapsible }) {
 			}
 			ref={containerMain}
 		>
-			<div className={skillsStyles["container-content"]} tabIndex={-1}>
+			<div
+				className={skillsStyles["container-content"]}
+				tabIndex={-1}
+				ref={element}
+			>
 				<ul
 					className={skillsStyles["list"] + " " + skillsStyles["content"]}
 				>

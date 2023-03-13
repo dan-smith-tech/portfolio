@@ -77,9 +77,14 @@ body,
 	height: fit-content;
 	background-color: var(--color-secondary);
 	scroll-behavior: smooth;
+	z-index: 0;
 
 	/* background-image: url("../public/images/texture.jpg");
 	background-attachment: fixed; */
+}
+
+.front {
+	z-index: 2;
 }
 
 :root {
@@ -109,6 +114,7 @@ body,
 	padding: 0;
 	font-family: "Assistant", sans-serif;
 	color: var(--color-neutral-white);
+	z-index: inherit;
 }
 
 .container-full {
@@ -139,7 +145,7 @@ h5 {
 }
 
 h1 {
-	font-size: 5rem;
+	font-size: 4.65rem;
 	font-weight: 900;
 	line-height: 3.5rem;
 }
@@ -170,15 +176,19 @@ h5 {
 }
 
 p {
-	text-align: justify;
+	/* text-align: justify; */
 }
 
 p,
 li {
 	margin-bottom: 1.5em;
 	font-size: 1.15rem;
-	font-weight: 500;
-	line-height: 2.2rem;
+	font-weight: 00;
+	line-height: 2.15rem;
+}
+
+section:focus {
+	outline: none;
 }
 
 p:last-child,
@@ -222,6 +232,11 @@ a:focus {
 
 a:active {
 	opacity: 0.35;
+}
+
+a:active::before {
+	transform: scale(0.95);
+	transition: none;
 }
 
 small {
@@ -348,5 +363,59 @@ label {
 
 	.form-p {
 		margin-bottom: 1.5rem;
+	}
+}
+
+/* Mouse effect */
+.container-blur {
+	position: fixed;
+	inset: 0;
+	backdrop-filter: blur(185px);
+	z-index: 1;
+}
+
+.container-mouse-effect {
+	position: fixed;
+	inset: 0;
+	z-index: 0;
+	overflow: hidden;
+}
+
+.mouse-effect {
+	position: absolute;
+	width: 35em;
+	height: 35em;
+	top: 50%;
+	left: 50%;
+	translate: -50% -50%;
+	border-radius: 64% 36% 33% 67% / 61% 31% 69% 39%;
+	background: var(--color-neutral-white);
+	background: linear-gradient(
+		90deg,
+		var(--color-neutral-white) 1%,
+		var(--color-primary) 100%
+	);
+	opacity: 0.25;
+	animation-name: mouseEffect;
+	animation-duration: 8.5s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+	z-index: 0;
+}
+
+@media (prefers-reduced-motion: no-preference) and (min-width: 1200px) {
+	@keyframes mouseEffect {
+		0% {
+			border-radius: 23% 77% 31% 69% / 36% 50% 50% 64%;
+			transform: scale(0.9, 1.15) rotate(0deg);
+		}
+		50% {
+			border-radius: 58% 42% 63% 37% / 83% 24% 76% 17%;
+			transform: scale(1.15, 0.9) rotate(183deg);
+		}
+		100% {
+			border-radius: 23% 77% 31% 69% / 36% 50% 50% 64%;
+			transform: scale(0.9, 1.15) rotate(0deg);
+		}
 	}
 }

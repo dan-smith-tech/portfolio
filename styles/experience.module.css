@@ -1,0 +1,17 @@
+.element {
+	margin-bottom: 3.5em;
+}
+
+.title {
+}
+
+.date {
+	margin-bottom: 0.65em;
+	font-weight: 700;
+	font-style: normal;
+	color: var(--color-primary);
+}
+
+.summary {
+	margin-top: 0.65em;
+}
