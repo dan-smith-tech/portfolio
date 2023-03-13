@@ -46,6 +46,11 @@
 	display: flex;
 }
 
+.description {
+	margin-bottom: 4.35em;
+	font-style: italic;
+}
+
 .content {
 	margin-bottom: 3.5rem;
 }
@@ -82,6 +87,10 @@
 
 .content pre {
 	margin: 1.85rem 0 1.85rem 0;
+}
+
+.content code {
+	color: var(--color-primary);
 }
 
 @media (max-width: 650px) {

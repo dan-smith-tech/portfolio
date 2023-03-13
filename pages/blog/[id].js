@@ -94,6 +94,9 @@ export default function Post({ frontmatter, content }) {
 							/>
 						</div>
 					</div>
+					<p className={postStyles["description"]}>
+						{frontmatter.description}
+					</p>
 					<ReactMarkdown
 						className={postStyles["content"]}
 						children={content}
