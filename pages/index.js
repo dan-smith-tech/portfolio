@@ -22,6 +22,14 @@ function Landing() {
 	const [showNewsletterModal, setShowNewsletterModal] = useState(false);
 	const splashSection = useRef();
 
+	function handleContactSubmit(e) {
+		e.preventDefault();
+		const name = e.target.name.value;
+		const email = e.target.email.value;
+		const body = e.target.body.value;
+		sendFetchRequest("/api/contact", "POST", { name, email, body });
+	}
+
 	function handleNewsletterSignup(e) {
 		e.preventDefault();
 		const email = e.target.email.value;
@@ -188,16 +196,7 @@ function Landing() {
 				heading={"Let's connect, and get in touch."}
 			>
 				<div className={"container-content"}>
-					<Script
-						src="https://s.pageclip.co/v1/pageclip.js"
-						charset="utf-8"
-					/>
-					<form
-						action="https://send.pageclip.co/92FMod1rpAg6GX3cDoCW21G3Z41ftFGu/contact"
-						method={"POST"}
-						className={"pageclip-form"}
-					>
-						<input type="hidden" name="form-name" value="Contact" />
+					<form onSubmit={handleContactSubmit}>
 						<div className={"form-row"}>
 							<div className={"form-element"}>
 								<label htmlFor="name">Name*</label>
@@ -230,12 +229,8 @@ function Landing() {
 							</div>
 						</div>
 						<div className={"form-row"}>
-							<Button
-								type="submit"
-								primary={true}
-								className={"pageclip-form__submit"}
-							>
-								<span>Send Message</span>
+							<Button type="submit" primary={true}>
+								Send Message
 							</Button>
 						</div>
 					</form>
@@ -293,7 +288,7 @@ function Landing() {
 				readHeightFromTopOfTop={false}
 				collapsible={false}
 			/>
-      <Footer />
+			<Footer />
 		</>
 	);
 }
