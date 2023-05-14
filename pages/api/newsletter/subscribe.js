@@ -2,62 +2,70 @@ const SibApiV3Sdk = require("sib-api-v3-sdk");
 let defaultClient = SibApiV3Sdk.ApiClient.instance;
 
 let apiKey = defaultClient.authentications["api-key"];
-apiKey.apiKey = process.env.SENDINBLUE_API_KEY;
+apiKey.apiKey = process.env.NEWSLETTER_API_KEY;
 
-import { encryptEmail, decryptEmail } from "../../../lib/crypto";
+import { encryptEmail } from "../../../lib/crypto";
 
 export default async function emailHandler(req, res) {
-	const { method } = req;
-	const { email } = req.body;
-
-	switch (method) {
+	switch (req.method) {
 		case "POST":
-			try {
-				var link =
-					process.env.ABSOLUTE_URL +
-					"/newsletter/subscribe/" +
-					encryptEmail(email) +
-					"?";
+			// create base URL for signup confirmation
+			var link =
+				process.env.NEWSLETTER_ABSOLUTE_URL +
+				"/newsletter/subscribe/" +
+				encryptEmail(req.body.email) +
+				"?";
 
-				if (
-					req.query.hasOwnProperty("bevlAnnouncements") &&
-					req.query["bevlAnnouncements"] == "true"
-				)
-					link += "bevlAnnouncements=true&";
-				if (
-					req.query.hasOwnProperty("productivityTips") &&
-					req.query["productivityTips"] == "true"
-				)
-					link += "productivityTips=true&";
+			// add query parameters depending on the specific newsltters signed up to
+			if (
+				req.query.hasOwnProperty("bevlAnnouncements") &&
+				req.query["bevlAnnouncements"] == "true"
+			)
+				link += "bevlAnnouncements=true&";
+			if (
+				req.query.hasOwnProperty("productivityTips") &&
+				req.query["productivityTips"] == "true"
+			)
+				link += "productivityTips=true&";
 
-				let apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
-				let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
+			// config Brevo API settings
+			let apiInstance = new SibApiV3Sdk.TransactionalEmailsApi();
+			let sendSmtpEmail = new SibApiV3Sdk.SendSmtpEmail();
 
-				sendSmtpEmail.templateId = 6;
-				sendSmtpEmail.sender = { name: "Bevl", email: "info@bevl.app" };
-				sendSmtpEmail.to = [{ email }];
-				sendSmtpEmail.replyTo = { name: "Bevl", email: "info@bevl.app" };
-				sendSmtpEmail.params = { link };
+			sendSmtpEmail.templateId = 6;
+			sendSmtpEmail.sender = {
+				name: process.env.NEWSLETTER_SENDER,
+				email: process.env.NEWSLETTER_EMAIL,
+			};
+			sendSmtpEmail.to = [{ email: req.body.email }];
+			sendSmtpEmail.replyTo = {
+				name: process.env.NEWSLETTER_SENDER,
+				email: process.env.NEWSLETTER_EMAIL,
+			};
+			sendSmtpEmail.params = { link };
 
-				apiInstance
-					.sendTransacEmail(sendSmtpEmail)
-					.then((data) => {
-						res.status(201).json({ success: true, data: { email } });
-					})
-					.catch((error) => {
-						console.error(error);
+			// send email with Brevo API
+			await apiInstance
+				.sendTransacEmail(sendSmtpEmail)
+				.then((data) => {
+					res.status(200).json({
+						success: true,
+						message: "Newsletter signup confirmation email sent.",
 					});
-			} catch (err) {
-				console.log(err);
-				res.status(400).json({ success: false, message: err });
-			}
+				})
+				.catch((err) => {
+					res.status(500).json({
+						success: false,
+						message:
+							"Problem sending newsletter signup confirmation email.",
+					});
+				});
 			break;
 		default:
-			res.status(400).json({
+			res.status(500).json({
 				success: false,
-				message: "Incorrect request method: " + method,
+				message: "Incorrect request method: " + req.method,
 			});
-			console.log("Incorrect request method" + method);
 			break;
 	}
 }

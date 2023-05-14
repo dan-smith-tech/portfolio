@@ -42,7 +42,7 @@ export default async function ContactHandler(req, res) {
 		default:
 			res.status(500).json({
 				success: false,
-				message: "Incorrect request method: " + method,
+				message: "Incorrect request method: " + req.method,
 			});
 			break;
 	}
