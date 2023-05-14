@@ -284,14 +284,10 @@ label {
 	margin-bottom: 1.5rem;
 }
 
-.pageclip-form__success {
-	inset: -0.2rem;
-	background-color: var(--color-secondary);
-	opacity: 0.85;
-}
-
-.pageclip-form__success__message {
-	color: var(--color-neutral-white);
+.checkbox-hidden {
+	position: absolute;
+	pointer-events: none;
+	opacity: 0;
 }
 
 @media (max-width: 1200px) {

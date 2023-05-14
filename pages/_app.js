@@ -1,8 +1,6 @@
 import { useEffect, useRef } from "react";
 import Head from "next/head";
 
-import Footer from "../components/Footer";
-
 import "../styles/global.css";
 
 function DanSmithPortfolio({ Component, pageProps }) {
@@ -11,7 +9,6 @@ function DanSmithPortfolio({ Component, pageProps }) {
 	useEffect(() => {
 		document.body.onpointermove = (e) => {
 			const { clientX, clientY } = e;
-			console.log(clientX, clientY);
 			mouseEffect.current.animate(
 				{
 					left: clientX + "px",

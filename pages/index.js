@@ -1,6 +1,5 @@
 import { useRef, useState } from "react";
 import Link from "next/link";
-import Script from "next/script";
 
 import Button from "../components/form/Button";
 import Input from "../components/form/Input";
@@ -24,10 +23,13 @@ function Landing() {
 
 	function handleContactSubmit(e) {
 		e.preventDefault();
-		const name = e.target.name.value;
-		const email = e.target.email.value;
-		const body = e.target.body.value;
-		sendFetchRequest("/api/contact", "POST", { name, email, body });
+		if (!e.target.do_not_check.checked) {
+			sendFetchRequest("/api/contact", "POST", {
+				name: e.target.name.value,
+				email: e.target.email.value,
+				body: e.target.body.value,
+			});
+		}
 	}
 
 	function handleNewsletterSignup(e) {
@@ -229,6 +231,11 @@ function Landing() {
 							</div>
 						</div>
 						<div className={"form-row"}>
+							<input
+								type="checkbox"
+								name="do_not_check"
+								className={"checkbox-hidden"}
+							/>
 							<Button type="submit" primary={true}>
 								Send Message
 							</Button>
