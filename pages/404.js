@@ -4,7 +4,7 @@ import Button from "../components/form/Button";
 
 import errorStyles from "../styles/error.module.css";
 
-function Custom404() {
+export default function Custom404() {
 	return (
 		<div className={errorStyles["container-main"]}>
 			<div className={errorStyles["container-error"]}>
@@ -23,5 +23,3 @@ function Custom404() {
 		</div>
 	);
 }
-
-export default Custom404;

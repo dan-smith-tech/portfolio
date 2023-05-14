@@ -3,7 +3,7 @@ import Head from "next/head";
 
 import "../styles/global.css";
 
-function DanSmithPortfolio({ Component, pageProps }) {
+export default function DanSmithTech({ Component, pageProps }) {
 	const mouseEffect = useRef();
 
 	useEffect(() => {
@@ -53,5 +53,3 @@ function DanSmithPortfolio({ Component, pageProps }) {
 		</>
 	);
 }
-
-export default DanSmithPortfolio;

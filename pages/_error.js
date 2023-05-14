@@ -5,7 +5,7 @@ Error.getInitialProps = ({ res, err }) => {
 	return { statusCode };
 };
 
-function Error({ statusCode }) {
+export default function Error({ statusCode }) {
 	return (
 		<div className={errorStyles["container-main"]}>
 			<div className={"container-error"}>
@@ -21,5 +21,3 @@ function Error({ statusCode }) {
 		</div>
 	);
 }
-
-export default Error;

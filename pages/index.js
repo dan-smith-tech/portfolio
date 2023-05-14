@@ -17,7 +17,7 @@ import { isEmail } from "../lib/helpers";
 
 import landingStyles from "../styles/landing.module.css";
 
-function Landing() {
+export default function Landing() {
 	const [showNewsletterModal, setShowNewsletterModal] = useState(false);
 	const splashSection = useRef();
 
@@ -299,5 +299,3 @@ function Landing() {
 		</>
 	);
 }
-
-export default Landing;
