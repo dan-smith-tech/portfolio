@@ -16,21 +16,11 @@ import sendFetchRequest from "../lib/fetch";
 import { isEmail } from "../lib/helpers";
 
 import landingStyles from "../styles/landing.module.css";
+import ContactForm from "../components/form/Contact";
 
 export default function Landing() {
 	const [showNewsletterModal, setShowNewsletterModal] = useState(false);
 	const splashSection = useRef();
-
-	function handleContactSubmit(e) {
-		e.preventDefault();
-		if (!e.target.do_not_check.checked) {
-			sendFetchRequest("/api/contact", "POST", {
-				name: e.target.name.value,
-				email: e.target.email.value,
-				body: e.target.body.value,
-			});
-		}
-	}
 
 	function handleNewsletterSignup(e) {
 		e.preventDefault();
@@ -198,49 +188,7 @@ export default function Landing() {
 				heading={"Let's connect, and get in touch."}
 			>
 				<div className={"container-content"}>
-					<form onSubmit={handleContactSubmit}>
-						<div className={"form-row"}>
-							<div className={"form-element"}>
-								<label htmlFor="name">Name*</label>
-								<Input
-									type="text"
-									name="name"
-									placeholder="Enter your name..."
-									required={true}
-								/>
-							</div>
-							<div className={"form-element"}>
-								<label htmlFor="email">Email*</label>
-								<Input
-									type="text"
-									name="email"
-									placeholder="Enter your email..."
-									required={true}
-								/>
-							</div>
-						</div>
-						<div className={"form-row"}>
-							<div className={"form-element"}>
-								<label htmlFor="body">Message*</label>
-								<Input
-									type="textarea"
-									name="body"
-									placeholder="Enter your message..."
-									required={true}
-								/>
-							</div>
-						</div>
-						<div className={"form-row"}>
-							<input
-								type="checkbox"
-								name="do_not_check"
-								className={"checkbox-hidden"}
-							/>
-							<Button type="submit" primary={true}>
-								Send Message
-							</Button>
-						</div>
-					</form>
+					<ContactForm />
 				</div>
 			</Section>
 			<Section

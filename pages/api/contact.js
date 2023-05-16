@@ -29,13 +29,15 @@ export default async function ContactHandler(req, res) {
 				.then((data) => {
 					res.status(200).json({
 						success: true,
-						message: "Discord notification sent.",
+						message:
+							"Your message has been sent. Thanks for getting in touch!",
 					});
 				})
 				.catch((err) => {
 					res.status(500).json({
 						success: false,
-						message: "Problem sending Discord notification.",
+						message:
+							"There was a problem sending your message. Please try again in a bit. Sorry!",
 					});
 				});
 			break;

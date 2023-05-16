@@ -252,10 +252,22 @@ small {
 	outline: none !important;
 }
 
+form {
+	position: relative;
+}
+
 .form-row {
 	margin-bottom: 1.5rem;
 	display: flex;
 	justify-content: center;
+	transition-property: opacity;
+	transition-duration: var(--animation-duration);
+	transition-timing-function: ease-in-out;
+}
+
+.form-sent .form-row {
+	opacity: 0.035;
+	user-select: none;
 }
 
 .form-row:last-child {
@@ -282,6 +294,113 @@ label {
 
 .form-p {
 	margin-bottom: 1.5rem;
+}
+
+.form-response {
+	position: absolute;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	opacity: 0;
+	pointer-events: none;
+	transition-property: opacity;
+	transition-duration: var(--animation-duration);
+	transition-timing-function: ease-in-out;
+}
+
+.form-sent .form-response {
+	opacity: 1;
+	pointer-events: all;
+}
+
+.form-response p {
+	max-width: 15em;
+}
+
+.loading {
+	width: 50px;
+	height: 50px;
+	position: relative;
+}
+
+.loading-hidden {
+	visibility: hidden;
+	display: none;
+}
+
+.loading span {
+	position: absolute;
+	left: calc(50% - 6px);
+	top: calc(50% - 6px);
+	height: 12px;
+	width: 12px;
+	border: 0.2em solid var(--color-neutral-white);
+	box-sizing: border-box;
+	border-radius: 50%;
+	animation-name: loading-segment;
+	animation-fill-mode: backwards;
+	animation-duration: 2.4s;
+	animation-iteration-count: infinite;
+	animation-timing-function: ease-in-out;
+}
+
+.loading span:nth-child(1) {
+	--transform-properties: translateX(25px);
+	animation-delay: 0s;
+}
+
+.loading span:nth-child(2) {
+	--transform-properties: rotate(45deg) translateX(25px);
+	animation-delay: 0.15s;
+}
+
+.loading span:nth-child(3) {
+	--transform-properties: rotate(90deg) translateX(25px);
+	animation-delay: 0.3s;
+}
+
+.loading span:nth-child(4) {
+	--transform-properties: rotate(135deg) translateX(25px);
+	animation-delay: 0.45s;
+}
+
+.loading span:nth-child(5) {
+	--transform-properties: rotate(180deg) translateX(25px);
+	animation-delay: 0.6s;
+}
+
+.loading span:nth-child(6) {
+	--transform-properties: rotate(225deg) translateX(25px);
+	animation-delay: 0.75s;
+}
+
+.loading span:nth-child(7) {
+	--transform-properties: rotate(270deg) translateX(25px);
+	animation-delay: 0.9s;
+}
+
+.loading span:nth-child(8) {
+	--transform-properties: rotate(315deg) translateX(25px);
+	animation-delay: 1.05s;
+}
+
+@keyframes loading-segment {
+	0% {
+		opacity: 0;
+	}
+	35% {
+		transform: var(--transform-properties) scale(1);
+		opacity: 1;
+	}
+	65% {
+		transform: var(--transform-properties) scale(1);
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
 }
 
 .checkbox-hidden {
