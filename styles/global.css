@@ -510,7 +510,7 @@ label {
 		var(--color-neutral-white) 1%,
 		var(--color-primary) 100%
 	);
-	opacity: 0.25;
+	opacity: 0.22;
 	animation-name: mouseEffect;
 	animation-duration: 8.5s;
 	animation-iteration-count: infinite;
