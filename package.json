@@ -1,27 +1,25 @@
 {
-	"name": "dan-smith-website",
-	"version": "1.0.0",
-	"description": "",
-	"main": "app.js",
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint"
-	},
-	"author": "Dan Smith",
-	"license": "ISC",
-	"dependencies": {
-		"crypto-js": "^4.1.1",
-		"fs": "0.0.1-security",
-		"gray-matter": "^4.0.3",
-		"next": "^12.1.4",
-		"node-fetch": "^3.3.1",
-		"react": "^18.2.0",
-		"react-dom": "^18.0.0",
-		"react-markdown": "^8.0.5",
-		"react-syntax-highlighter": "^15.5.0",
-		"sharp": "^0.30.6",
-		"sib-api-v3-sdk": "^8.4.0"
-	}
+  "name": "dan-smith-tech-website",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "next": "14.1.0",
+    "node-fetch": "^3.3.2",
+    "react": "^18",
+    "react-dom": "^18"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.1.0",
+    "typescript": "^5"
+  }
 }
