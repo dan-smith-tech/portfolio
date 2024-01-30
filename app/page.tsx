@@ -74,7 +74,7 @@ export default function Landing() {
 				</div>
 			</section>
 			<Section
-				subheading={"ABOUT"}
+				subheading={"about"}
 				heading={"UX is my passion, programming is my hobby."}
 			>
 				<div className={"container-content"}>
@@ -85,7 +85,7 @@ export default function Landing() {
 				</div>
 			</Section>
 			<Section
-				subheading={"PROJECTS"}
+				subheading={"projects"}
 				heading={"Talk is cheap. Let's get to the good stuff."}
 			>
 				{projectsContent.map((project, i) => (
@@ -100,7 +100,7 @@ export default function Landing() {
 				))}
 			</Section>
 			<Section
-				subheading={"EXPERIENCE"}
+				subheading={"experience"}
 				heading={"I focus on the learning, not the finishing."}
 			>
 				<div className={"container-content"}>
@@ -115,7 +115,7 @@ export default function Landing() {
 				</div>
 			</Section>
 			<Section
-				subheading={"CONTACT"}
+				subheading={"contact"}
 				heading={"Let's connect, and get in touch."}
 			>
 				<div className={"container-content"}>

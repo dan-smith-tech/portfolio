@@ -9,10 +9,13 @@
 	height: 18em;
 	display: flex;
 	position: sticky;
-
 	overflow-y: hidden;
 	padding-right: 1em;
 	transform: translateX(1em);
+	opacity: 0;
+	transition-property: opacity;
+	transition-duration: var(--animation-duration);
+	transition-timing-function: ease-in-out;
 }
 
 .list {

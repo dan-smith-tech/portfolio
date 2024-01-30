@@ -27,6 +27,12 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body className={font.className}>
+				<noscript>
+					<p className="noscript">
+						JavaScript is not enabled in your browser. Please allow
+						JavaScript to run in order to properly explore my portfolio :)
+					</p>
+				</noscript>
 				<Root>{children}</Root>
 			</body>
 		</html>

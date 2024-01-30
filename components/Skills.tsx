@@ -80,6 +80,8 @@ export default function Skills({
 
 		element.current!.style.top =
 			(window.innerHeight - element.current!.clientHeight) / 2 + "px";
+
+		element.current!.style.opacity = "1";
 	}
 
 	useEffect(() => {

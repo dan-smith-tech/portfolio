@@ -10,6 +10,7 @@
 	margin-bottom: 1.85em;
 	color: var(--color-primary);
 	letter-spacing: 0.015rem;
+	text-transform: uppercase;
 }
 
 .heading {

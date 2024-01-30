@@ -41,6 +41,17 @@ body * {
 	font-family: inherit;
 }
 
+.noscript {
+	padding: 1.5em;
+	position: fixed !important;
+	inset: 0;
+	display: flex;
+	align-items: center;
+	z-index: 9999 !important;
+	background-color: var(--color-secondary);
+	justify-content: center;
+}
+
 .front {
 	z-index: 2;
 }
