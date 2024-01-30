@@ -21,7 +21,7 @@ export default function Footer({ small }: { small?: boolean }) {
 					<p>
 						This website is open-source:{" "}
 						<a
-							href={"https://github.com/dan-smith-tech/website"}
+							href={"https://github.com/dan-smith-tech/portfolio"}
 							target={"_blank"}
 						>
 							Fork it on GitHub
