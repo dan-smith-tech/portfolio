@@ -1,5 +1,7 @@
 import { useRef, useEffect, useState } from "react";
 
+import { skillsContent } from "@/content/skills";
+
 import styles from "./Skills.module.css";
 
 export default function Skills({
@@ -17,32 +19,11 @@ export default function Skills({
 	const containerMain = useRef<HTMLDivElement>(null);
 	const element = useRef<HTMLDivElement>(null);
 
-	const skills = [
-		{ name: "Python" },
-		{ name: "NumPy" },
-		{ name: "C / GCC" },
-		{ name: "Java" },
-		{ name: "Android Studio" },
-		{ name: "JavaScript" },
-		{ name: "Node.js" },
-		{ name: "Express.js" },
-		{ name: "MongoDB" },
-		{ name: "SQL" },
-		{ name: "Postman" },
-		{ name: "HTML / CSS" },
-		{ name: "React" },
-		{ name: "Next.js" },
-		{ name: "Electron" },
-		{ name: "Unity" },
-		{ name: "C#" },
-		{ name: "Git / GitHub" },
-		{ name: "Figma" },
-	];
-
 	function nextSkill() {
 		setCurrentSkill((currentSkill) => {
 			// Make index infinitely loop by setting it back to the first element if it's at the end of the array:
-			const i = currentSkill === skills.length - 1 ? 0 : currentSkill + 1;
+			const i =
+				currentSkill === skillsContent.length - 1 ? 0 : currentSkill + 1;
 
 			// Get the height of the selected skill element:
 			const largeHeight = 60;
@@ -130,10 +111,10 @@ export default function Skills({
 				ref={element}
 			>
 				<ul className={styles["list"] + " " + styles["content"]}>
-					{skills &&
-						skills.map((skill, i) => (
+					{skillsContent &&
+						skillsContent.map((skill, i) => (
 							<li className={getSkillStyles(i)} key={i}>
-								{skills[i].name}
+								{skillsContent[i].name}
 							</li>
 						))}
 				</ul>

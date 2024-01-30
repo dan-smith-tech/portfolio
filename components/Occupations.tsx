@@ -1,24 +1,19 @@
 import { useRef, useEffect, useState } from "react";
 
+import { occupationsContent } from "@/content/occupations";
+
 import styles from "./Occupations.module.css";
 
 export default function Occupations() {
 	const [currentOccupation, setCurrentOccupation] = useState(0);
 	const containerMain = useRef<HTMLDivElement>(null);
 
-	const occupations = [
-		{ name: "Machine Learning Enthusiast" },
-		{ name: "Software Engineer" },
-		{ name: "Front-End Web Developer" },
-		{ name: "Full-Stack Web Developer" },
-	];
-
 	function nextOccupation() {
 		setCurrentOccupation((currentOccupation) => {
 			// Make index infinitely loop by setting it back to the first element if it's at the end of the array:
 			const i =
 				currentOccupation === 0
-					? occupations.length - 1
+					? occupationsContent.length - 1
 					: currentOccupation - 1;
 
 			// // Get the height of an occupation element:
@@ -52,10 +47,10 @@ export default function Occupations() {
 	return (
 		<div className={styles["container-main"]} ref={containerMain}>
 			<ul>
-				{occupations &&
-					occupations.map((occupation, i) => (
+				{occupationsContent &&
+					occupationsContent.map((occupation, i) => (
 						<li className={getOccupationStyles(i)} key={i}>
-							{occupations[i].name}
+							{occupationsContent[i].name}
 						</li>
 					))}
 			</ul>
