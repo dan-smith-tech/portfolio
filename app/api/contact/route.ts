@@ -10,7 +10,7 @@ export async function POST(req: Request) {
 		},
 		body: JSON.stringify({
 			username: "dansmith.tech",
-			avatar_url: "https://www.dansmith.tech/images/discord-avatar.png",
+			avatar_url: "https://www.dansmith.tech/images/avatar.png",
 			content: "New contact form submission:",
 			embeds: [
 				{

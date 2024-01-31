@@ -1,7 +1,7 @@
 export const aboutContent = {
 	text: [
-		"I love creating minimalist, modern, and enjoyable experiences. I believe the best UX exists where the least UI does, so the UI that does exist must be outstanding.",
-		"Innovation can only truly happen when technology is developed by a multitude of diverse people, and I therefore strive to partake in and support open-source wherever I can.",
+		"I  create minimalist, modern, and cohesive experiences. With a background in full-stack web development, my passion lies in exploring the frontier of machine learning and research science. I am particularly interested in machine vision, as well as the philosophical discussions and design of artificial general intelligence.",
+		"I am guided by a strong ethical compass, ensuring my work prioritises people and the environment. I believe innovation requires technology to be developed by a range of diverse people, and I therefore strive to partake in and support open-source wherever I can.",
 	],
 	awards: [
 		{ image: "cssda-best-innovation.png" },

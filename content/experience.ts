@@ -1,44 +1,26 @@
 export const experienceContent = [
 	{
-		title: "Nutrition Mobile App Team Project",
-		date: "February 2023 - Present",
-		summary:
-			"I am working in a team of 7, using the Agile SCRUM methodology to develop a personal informatics software application using Java (Android Studio) and SQL. Users can track their nutrition intake and mood fluctuations throughout the day, to set goals and track progress over time. We are conducting 2-week long sprints and I am acting as a SCRUM master, ensuring everyone stays on-task, work is distributed equitably, and that there are frequent check-ins.",
-	},
-	{
 		title: "Compiler Intern - Wolfram Research",
 		date: "June 2023 - September 2023",
 		summary:
-			"I worked on the Wolfram Language compiler with the head of kernel development at Wolfram using LLVM to add functionality to many different areas of the compiled Wolfram Language. I implemented an interface for Intel's MKL, to optimise linear algebra operations on the CPU, created an optimised sparse polynomial data",
+			"Working alongside the head of kernel development at Wolfram, I integrated LLVM technology and expanded the functionality of various parts of the Wolfram compiler. I developed an interface for Intel’s MKL (enhancing CPU-based linear algebra computations), and optimised the MXNet interface by refactoring  C++ to facilitate the creation of more complex neural networks. I also co-created a sparse polynomial data structure, along with various efficient operations, and devised a modular benchmarking system for comparison of the C++ standard library and compiled Wolfram Language, planned for use within future Wolfram presentations.",
 	},
 	{
 		title: "Lead Web Designer and Developer - Edie.One",
 		date: "February 2023 - Present",
 		summary:
-			"I conducted both online (secondary) and in-person (primary) research for a marketing agency. Working with two other consultants, we conducted in-person questionnaires and undertook desk research to identify he most effective segments and segment sizes for this digital marketing agency. Findings were presented in a concise presentation to the founders of the business.",
+			"After completing a 3-week internship (performing market analysis), I was asked to stay on as a web designer and developer where I work on creating websites for clients that align with their brand. I focus on excellent user experience, using React, CSS, Next.js, and Prismic.io, with Figma to design and prototype. I always work in an agile SCRUM methodology, using 1-2 week sprints to deliver stages of a project.",
 	},
 	{
-		title: "3-Day Startup",
-		date: "October 2022",
-		summary:
-			"I worked with 3 people I had never met before to create a business plan and pitch deck - which we presented in front of investors - over the course of 1 weekend.",
-	},
-	{
-		title: "Neural Network and Deep Learning Research",
-		date: "December 2021",
-		summary:
-			"For my IB Extended Essay I investigated and experimented with the relationship between neuron density / number of hidden layers and efficiency / accuracy of a neural network. I implemented a neural network and collected a large amount of data to demonstrate a relationship between the above characteristics. As per the requirements of the Extended Essay, I presented this information in a dissertation-style essay.",
-	},
-	{
-		title: "Front-End Web Developer for the IB",
+		title: "Front-End Web Developer - IB",
 		date: "June 2020 - August 2020",
 		summary:
-			"I secured a summer internship at age 16 in the IB IT department, working on the interface (as well as providing content) for a digital resource library using HTML, CSS, and JavaScript. I communicated with a team of designers and developers and pitched my ideas for navigation and responsive card layouts through designs and prototypes.",
+			"At age 16, I secured a summer internship at the IB, working on the interface (as well as providing content) for an online resource for teachers and students. I used HTML, CSS, and JavaScript to develop the navigation and card layouts of the resources. I communicated with a team of designers and developers and pitched my ideas for designs, as well as acted upon feedback and designs provided to me by other developers in the team.",
 	},
 	{
-		title: "UX/UI Consultant – Hive Learning",
+		title: "UX Consultant – Hive Learning",
 		date: "March 2020 - May 2020",
 		summary:
-			"As a result of my IB MYP personal project (a mobile game I released on the Google Play Store made with Unity/C#), I was invited to work with the development team at Hive Learning to provide feedback on how their interface, UX, and content could better target their users. This required me to produce documents and diagrams to convey my ideas accurately and concisely.",
+			"After releasing a game I developed on the Google Play store for my Personal Project in Year 11 of highschool, I was asked to provide some feedback on the Hive Learning student platform. After extensively testing the system, I wrote a concise report on how the system's interface, content, and overall experience could be improved to better target their users (students).",
 	},
 ];

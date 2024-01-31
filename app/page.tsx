@@ -94,14 +94,16 @@ export default function Landing() {
 						heading={project.heading}
 						summary={project.summary}
 						link={project.link}
-						images={project.images}
-						imageFirst={project.imageFirst}
+						images={
+							i % 2 === 0 ? project.images : project.images.reverse()
+						}
+						imageFirst={i % 2 === 0}
 					/>
 				))}
 			</Section>
 			<Section
 				subheading={"experience"}
-				heading={"I focus on the learning, not the finishing."}
+				heading={"I love to experiment with technology and its uses."}
 			>
 				<div className={"container-content"}>
 					{experienceContent.map((experience, i) => (
@@ -116,7 +118,7 @@ export default function Landing() {
 			</Section>
 			<Section
 				subheading={"contact"}
-				heading={"Let's connect, and get in touch."}
+				heading={"Let's connect, and start a conversation."}
 			>
 				<div className={"container-content"}>
 					<ContactForm />
