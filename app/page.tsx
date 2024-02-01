@@ -40,10 +40,10 @@ export default function Landing() {
 							</span>
 							<span className={styles["header-punctuation"]}>.</span>
 						</h1>
-						<h3 className={styles["roles"]}>
+						<h2 className={styles["roles"]}>
 							<span>I&apos;m a... </span>
 							<Occupations />
-						</h3>
+						</h2>
 						<div className={styles["container-button"]}>
 							<Button
 								type="button"

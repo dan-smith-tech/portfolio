@@ -187,7 +187,7 @@
 	margin-left: 5em;
 }
 
-.container-info h3 {
+.container-info h4 {
 	margin-bottom: 0.65em;
 	font-size: 1.65rem;
 }
@@ -269,7 +269,7 @@
 		padding: 2em 0;
 	}
 
-	.container-info h3 {
+	.container-info h4 {
 		font-size: 1.5rem;
 	}
 }

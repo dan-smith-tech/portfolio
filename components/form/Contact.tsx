@@ -31,7 +31,6 @@ export default function ContactForm() {
 				body: formTarget.body.value,
 			}).then((response: unknown) => {
 				const res = response as ApiResponse;
-				console.log(res);
 				contactFormLoaderElement.current!.classList.add("loading-hidden");
 				contactFormMessageElement.current!.innerHTML = res.message;
 			});
@@ -72,8 +71,10 @@ export default function ContactForm() {
 				</div>
 			</div>
 			<div className={"form-row"}>
+				<label htmlFor="do_not_check" className={"checkbox-hidden"} />
 				<input
 					type="checkbox"
+					id="do_not_check"
 					name="do_not_check"
 					className={"checkbox-hidden"}
 					tabIndex={-1}

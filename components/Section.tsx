@@ -49,8 +49,8 @@ export default function Button({
 		>
 			<div className={"container-partial " + styles["container-partial"]}>
 				<div className={"container-content "} ref={intersectionDetectorRef}>
-					<h4 className={getSubheadingStyles()}>{subheading}</h4>
-					<h2 className={getHeadingStyles()}>{heading}</h2>
+					<h2 className={getSubheadingStyles()}>{subheading}</h2>
+					<h3 className={getHeadingStyles()}>{heading}</h3>
 					<div className={getDividerStyles()}></div>
 				</div>
 				{children}

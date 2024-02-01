@@ -128,6 +128,9 @@ export default function Project({
 				{images &&
 					images.map((image, i) => (
 						<button
+							id={`${heading}-image-select-${i}`}
+							aria-label="Select image"
+							name="Select image"
 							className={getImageSelectStyles(i)}
 							onClick={() => selectImage(i)}
 							key={i}
@@ -141,7 +144,7 @@ export default function Project({
 
 	const textElement = (
 		<div className={getInfoContainerStyles()} tabIndex={-1}>
-			<h3>{heading}</h3>
+			<h4>{heading}</h4>
 			<p>{summary}</p>
 			<a href={link} target={"_blank"}>
 				View Project{" "}

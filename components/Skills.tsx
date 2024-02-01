@@ -122,7 +122,11 @@ export default function Skills({
 				</ul>
 				<ul className={styles["list"] + " " + styles["links"]}>
 					<li className={styles["links-element"]}>
-						<a href={"https://github.com/dan-smith-tech"} target="_blank">
+						<a
+							href={"https://github.com/dan-smith-tech"}
+							target="_blank"
+							aria-label="GitHub link"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"
@@ -140,6 +144,7 @@ export default function Skills({
 						<a
 							href={"https://www.linkedin.com/in/dan-smith-tech"}
 							target="_blank"
+							aria-label="LinkedIn link"
 						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
@@ -162,7 +167,11 @@ export default function Skills({
 						</a>
 					</li>
 					<li className={styles["links-element"]}>
-						<a href={"https://codepen.io/dan-smith-tech"} target="_blank">
+						<a
+							href={"https://codepen.io/dan-smith-tech"}
+							target="_blank"
+							aria-label="CodePen link"
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="24"

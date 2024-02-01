@@ -12,7 +12,7 @@ export default function Footer({
 	return (
 		<div className={styles["element"]}>
 			<small className={styles["date"]}>{date}</small>
-			<h3 className={styles["title"]}>{title}</h3>
+			<h4 className={styles["title"]}>{title}</h4>
 			<p className={styles["summary"]}>{summary}</p>
 		</div>
 	);
