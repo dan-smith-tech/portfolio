@@ -110,7 +110,7 @@ export default function Project({
 						>
 							<Image
 								src={"/images/projects/" + image}
-								alt={`Image {i + 1} of ${heading}.`}
+								alt={`Image ${i + 1} of ${heading}.`}
 								layout="fill"
 								className={styles["image"]}
 								draggable="false"
