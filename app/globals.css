@@ -407,8 +407,8 @@ label {
 
 .mouse-effect {
 	position: absolute;
-	width: 35em;
-	height: 35em;
+	width: 42em;
+	height: 42em;
 	top: 50%;
 	left: 50%;
 	translate: -50% -50%;
@@ -421,7 +421,7 @@ label {
 	);
 	opacity: 0.35;
 	animation-name: mouseEffect;
-	animation-duration: 8.5s;
+	animation-duration: 10s;
 	animation-iteration-count: infinite;
 	animation-timing-function: ease-in-out;
 	z-index: 0;
