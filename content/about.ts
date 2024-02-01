@@ -4,8 +4,8 @@ export const aboutContent = {
 		"I am guided by a strong ethical compass, ensuring my work prioritises people and the environment. I believe innovation requires technology to be developed by a range of diverse people, and I therefore strive to partake in and support open-source wherever I can.",
 	],
 	awards: [
-		{ image: "cssda-best-innovation.png" },
-		{ image: "cssda-best-ui.png" },
-		{ image: "cssda-best-ux.png" },
+		{ image: "cssda-best-innovation.webp" },
+		{ image: "cssda-best-ui.webp" },
+		{ image: "cssda-best-ux.webp" },
 	],
 };
