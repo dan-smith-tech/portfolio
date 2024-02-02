@@ -15,12 +15,13 @@ export default function Skills({
 	readHeightFromTopOfTop: boolean;
 }) {
 	const [currentSkill, setCurrentSkill] = useState<number>(0);
+	const [render, setRender] = useState<boolean>(true);
 	const containerMain = useRef<HTMLDivElement>(null);
 	const element = useRef<HTMLDivElement>(null);
 
-	if (isMobile()) return null;
-
 	function nextSkill() {
+		if (!containerMain || !containerMain.current) return;
+
 		setCurrentSkill((currentSkill) => {
 			// Make index infinitely loop by setting it back to the first element if it's at the end of the array:
 			const i =
@@ -57,32 +58,38 @@ export default function Skills({
 	};
 
 	function calculateElementPosition() {
-		const top =
-			window.pageYOffset +
-			(readHeightFromTopOfTop
-				? document
-						.querySelector("#" + topElementId)!
-						.getBoundingClientRect().top
-				: document
-						.querySelector("#" + topElementId)!
-						.getBoundingClientRect().bottom);
-		const bottom =
-			window.pageYOffset +
-			document.querySelector("#" + bottomElementId)!.getBoundingClientRect()
-				.top;
+		if (isMobile()) setRender(false);
+		else {
+			const top =
+				window.pageYOffset +
+				(readHeightFromTopOfTop
+					? document
+							.querySelector("#" + topElementId)!
+							.getBoundingClientRect().top
+					: document
+							.querySelector("#" + topElementId)!
+							.getBoundingClientRect().bottom);
+			const bottom =
+				window.pageYOffset +
+				document
+					.querySelector("#" + bottomElementId)!
+					.getBoundingClientRect().top;
 
-		containerMain.current!.style.top =
-			top + (window.innerHeight - element.current!.clientHeight) / 2 + "px";
-		containerMain.current!.style.height =
-			bottom -
-			top -
-			(window.innerHeight - element.current!.clientHeight) +
-			"px";
+			containerMain.current!.style.top =
+				top +
+				(window.innerHeight - element.current!.clientHeight) / 2 +
+				"px";
+			containerMain.current!.style.height =
+				bottom -
+				top -
+				(window.innerHeight - element.current!.clientHeight) +
+				"px";
 
-		element.current!.style.top =
-			(window.innerHeight - element.current!.clientHeight) / 2 + "px";
+			element.current!.style.top =
+				(window.innerHeight - element.current!.clientHeight) / 2 + "px";
 
-		element.current!.style.opacity = "1";
+			element.current!.style.opacity = "1";
+		}
 	}
 
 	useEffect(() => {
@@ -96,6 +103,8 @@ export default function Skills({
 			clearInterval(interval);
 		};
 	}, []);
+
+	if (!render) return null;
 
 	return (
 		<div className={styles["container-main"]} ref={containerMain}>
