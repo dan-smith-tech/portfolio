@@ -74,10 +74,13 @@
 
 	.subheading {
 		margin-bottom: 1.35em;
+		font-size: 1rem;
 	}
 
 	.heading {
 		margin-bottom: 0.35em;
+		font-size: 2.35rem;
+		line-height: 3rem;
 	}
 
 	.divider {

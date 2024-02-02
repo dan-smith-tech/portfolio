@@ -128,13 +128,11 @@ export default function Landing() {
 				topElementId={"splash"}
 				bottomElementId={"projects"}
 				readHeightFromTopOfTop={true}
-				collapsible={true}
 			/>
 			<Skills
 				topElementId={"projects"}
 				bottomElementId={"footer"}
 				readHeightFromTopOfTop={false}
-				collapsible={false}
 			/>
 			<Footer />
 		</>

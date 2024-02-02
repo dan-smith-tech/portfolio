@@ -337,27 +337,6 @@ label {
 		font-size: 3.15rem !important;
 		line-height: 3.15rem !important;
 	}
-
-	h2 {
-		font-size: 1.85rem;
-		line-height: 2.65rem;
-	}
-
-	h3 {
-		font-size: 1.15rem;
-		line-height: 1.15rem;
-	}
-
-	h4 {
-		font-size: 1.05rem;
-		line-height: 1.05rem;
-	}
-
-	h5 {
-		font-size: 0.85rem;
-		line-height: 1.5rem;
-	}
-
 	p,
 	li {
 		font-size: 1rem;
@@ -378,8 +357,8 @@ label {
 
 	label {
 		width: fit-content;
-		margin-bottom: 0.5em;
-		padding-left: 2.5em;
+		margin-bottom: 0.65em;
+		padding-left: 0.65em;
 		display: flex;
 		font-size: 1rem;
 		font-weight: 600;

@@ -126,6 +126,16 @@
 }
 
 @media (max-width: 650px) {
+	.header-name {
+		line-height: 5.85rem;
+	}
+
+	.roles {
+		flex-direction: column;
+		align-items: flex-start;
+		gap: 0.35em;
+	}
+
 	.container-button {
 		width: 100%;
 		flex-direction: column;

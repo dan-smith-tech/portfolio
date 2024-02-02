@@ -149,17 +149,6 @@
 		visibility: hidden;
 	}
 
-	.container-main-collapsible {
-		max-width: calc(50rem + 2 * 2.5rem);
-		margin: 0 auto;
-		padding: 3.15em 1.85rem;
-		height: fit-content !important;
-		position: relative !important;
-		inset: auto;
-		display: block;
-		visibility: visible;
-	}
-
 	.container-content {
 		width: 100%;
 		display: flex;

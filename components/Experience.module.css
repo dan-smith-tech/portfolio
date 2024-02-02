@@ -18,3 +18,13 @@
 .summary {
 	margin-top: 0.65em;
 }
+
+@media (max-width: 650px) {
+	.title {
+		line-height: 2rem;
+	}
+
+	.date {
+		margin-bottom: 0.35em;
+	}
+}

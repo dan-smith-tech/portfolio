@@ -36,14 +36,14 @@
 	opacity: 0;
 }
 
-@media (max-width: 400px) {
+@media (max-width: 500px) {
 	.container-main {
 		margin: 0;
 	}
 }
 
-@media (max-width: 300px) {
+@media (max-width: 400px) {
 	.content-element {
-		font-size: 0.85rem;
+		font-size: 1.35rem;
 	}
 }

@@ -3,21 +3,22 @@ import { useRef, useEffect, useState } from "react";
 import { skillsContent } from "@/content/skills";
 
 import styles from "./Skills.module.css";
+import { isMobile } from "@/lib/helpers";
 
 export default function Skills({
 	topElementId,
 	bottomElementId,
 	readHeightFromTopOfTop,
-	collapsible,
 }: {
 	topElementId: string;
 	bottomElementId: string;
 	readHeightFromTopOfTop: boolean;
-	collapsible: boolean;
 }) {
 	const [currentSkill, setCurrentSkill] = useState<number>(0);
 	const containerMain = useRef<HTMLDivElement>(null);
 	const element = useRef<HTMLDivElement>(null);
+
+	if (isMobile()) return null;
 
 	function nextSkill() {
 		setCurrentSkill((currentSkill) => {
@@ -97,16 +98,7 @@ export default function Skills({
 	}, []);
 
 	return (
-		<div
-			className={
-				!collapsible
-					? styles["container-main"]
-					: styles["container-main"] +
-					  " " +
-					  styles["container-main-collapsible"]
-			}
-			ref={containerMain}
-		>
+		<div className={styles["container-main"]} ref={containerMain}>
 			<div
 				className={styles["container-content"]}
 				tabIndex={-1}
