@@ -9,7 +9,7 @@ export const projectsContent = [
 	{
 		heading: "Advanced OCR",
 		summary:
-			"The  accuracy of most OCR applications diminishes when dealing with unstructured text embedded in noisy images. This project consists of a data generator  data generator to create randomised images with random text and a noisy background. I'm working with PyTorch to design a model that can extract the position and text data from these images.",
+			"The  accuracy of most OCR applications diminishes when dealing with unstructured text embedded in noisy images. This project consists of a data generator to create randomised images with random text and a noisy background. I'm working with PyTorch to design a model that can extract the position and text data from these images.",
 		link: "https://github.com/dan-smith-tech/nocru",
 		images: ["ocr/before.webp", "ocr/after.webp"],
 	},
