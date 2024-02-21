@@ -3,7 +3,7 @@ export const projectsContent = [
 		heading: "Conduit",
 		summary:
 			"Built with Next.js, Django, and MySQL, Conduit is an open-source tool that allows users to customise and pre-engineer generative AI prompts and automatons. I designed Conduit to improve the poor user experience of traditional question-answer AI chats.",
-		link: "https://conduit-ai.vercel.app/",
+		link: "https://www.conduits.link",
 		images: ["conduit/menu.webp", "conduit/response.webp"],
 	},
 	{
@@ -17,7 +17,7 @@ export const projectsContent = [
 		heading: "Moored Solutions",
 		summary:
 			"Moored Solutions is a startup building technology for the marina industry. I lead the design and development of everything that users touch for the Moored Solutions marina payment system, which includes an Airbnb-like booking system for boat owners, and an analytics-based dashboard manager for marina owners.",
-		link: "https://mooredsolutions.com/",
+		link: "https://www.mooredsolutions.com",
 		images: [
 			"moored-solutions/booking.webp",
 			"moored-solutions/dashboard.webp",
