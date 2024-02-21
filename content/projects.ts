@@ -1,10 +1,10 @@
 export const projectsContent = [
 	{
-		heading: "Noteworthy",
+		heading: "Conduit",
 		summary:
-			"Built with Next.js, Django, and MySQL, Noteworthy is an open-source tool that allows users to customise and pre-engineer generative AI prompts and automatons. I designed Noteworthy to improve the poor user experience provided by traditional question-answer AI chats.",
-		link: "https://noteworthy-ai.vercel.app/",
-		images: ["noteworthy/menu.webp", "noteworthy/response.webp"],
+			"Built with Next.js, Django, and MySQL, Conduit is an open-source tool that allows users to customise and pre-engineer generative AI prompts and automatons. I designed Conduit to improve the poor user experience of traditional question-answer AI chats.",
+		link: "https://conduit-ai.vercel.app/",
+		images: ["conduit/menu.webp", "conduit/response.webp"],
 	},
 	{
 		heading: "Advanced OCR",
