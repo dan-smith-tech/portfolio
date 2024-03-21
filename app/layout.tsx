@@ -18,7 +18,6 @@ export const metadata: Metadata = {
 import Root from "@/components/Root";
 
 import "./globals.css";
-import Head from "next/head";
 
 export default function RootLayout({
 	children,
@@ -27,13 +26,13 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en">
-			<Head>
+			<head>
 				<script
 					defer
 					src={process.env.NEXT_PUBLIC_ANALYTICS_URL}
 					data-website-id={process.env.NEXT_PUBLIC_ANALYTICS_KEY}
 				/>
-			</Head>
+			</head>
 			<body className={font.className}>
 				<noscript>
 					<p className="noscript">
